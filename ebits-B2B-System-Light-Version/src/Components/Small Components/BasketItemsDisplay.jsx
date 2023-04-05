@@ -67,9 +67,9 @@ export default function BasketProductsDisplay(props) {
 
   return (
     <div className="item-display-basket w-full">
-      <div className="block px-6 py-6 bg-white border-white border-slate-300 rounded-sm text-sm shadow-md focus:outline-none">
+      <div className="bg-white border-white rounded-sm text-sm shadow-md focus:outline-none">
         <div className="flex justify-between items-center">
-          <div className="flex items-center space-x-5 ml-10 mr-10">
+          <div className="flex items-center ml-10 mr-10">
             <img
               className="w-10 h-10 object-contain"
               src={`http://65.109.137.46:5000/img/${product.ProductIndex}_${product.VariationID}.jpg`}
