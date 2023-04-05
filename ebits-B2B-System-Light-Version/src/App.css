@@ -1,0 +1,708 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**** <====\ == ! | CSS RESET | ! == /====> ****/
+
+#root {
+  width: 100vw;
+}
+html {
+  height: 100vh;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+  /**********************************************************************/
+
+  /****                                                              ****/
+  /**** <<===== === ! | THE APP STYLING STARTS HERE | ! === =====>>  ****/
+  /**** <<=====                                                      ****/
+  /****               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^                   ****/
+
+
+
+
+  /* <--- --- | HEADER-BAR COMPONENT STYLING | --- ---> */
+
+.application-header-bar {
+  width: 100%;
+}
+.application-header-bar-inner {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  padding-left: 27px;
+}
+.application-header-bar-company-logo {
+  width: 140px;
+  height: 81px;
+}
+.application-header-bar-empty-side {
+  width: 100%;
+}
+
+
+
+  /* <--- --- | PROCESS MICRO COPY COMPONENT STYLING | --- ---> */
+.process-micro-copy-holder {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+
+  /* <--- --- | HEADER-BAR COMPONENT STYLING | --- ---> */
+
+  .buttons-holder {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: transparent;
+  }
+  
+  .buttons-holder-h {
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+    margin-top: 80px;
+  }
+  
+  .buttons-holder-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 25px;
+  }
+
+  .btn-holder-next {
+    color: rgb(228, 228, 228);
+    width: 178px;
+    height: 55px;
+    font-size: 23px;
+  }
+  .btn-holder-back{
+    color: rgb(136, 136, 136);
+  }
+
+
+    /* <--- --- | PAGE LEFT SIDE SEARCH COMPONENT STYLING | --- ---> */
+
+  .page-left-side-wrapper{
+    width: 775px;
+    height: 525px;
+    margin: 20px 10px 3px 50px;
+   }
+
+  .line {
+    width: 725px;
+    height: 2px;
+    background-color: grey;
+  }
+
+  .line-2{
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  .page-left-side-search-bar {
+    margin: 10px 0px;
+  }
+
+  .icon{
+    margin-left: 530px;
+  }
+
+
+        /* <--- --- | PAGE LEFT SIDE KIT TOP SECTION COMPONENT STYLING | --- ---> */
+    .page-left-side-top-section {
+      width: 80%;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .page-left-side-top-section-amount-window-holder {
+      width: 160px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .kit-amount-window {
+      width: 64px;
+      height: 35px;
+      text-align: center;
+      border-radius: 10px;
+      padding: 0 10px; 
+    }
+    
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-moz-inner-spin-button,
+    input[type="number"]::-moz-outer-spin-button {
+      color: #551C50;
+      border-radius: 10px;
+      margin: 0 5px;
+      height: 100%;
+    }
+        /* <--- --- | SEARCH BAR PRODUCT DISPLAY COMPONENT STYLING | --- ---> */
+
+        .product-search-bar {
+          display: flex;
+          align-items: center;
+          position: relative;
+          left: 0;
+          width: 100%;
+          background-color: rgb(255, 255, 255);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          padding: 5px;
+          z-index: 1;
+        }
+
+        .product-search-bar-h {
+          display: flex;
+          align-items: center;
+          position: relative;
+          left: 0;
+          width: 100%;
+          background-color: rgb(255, 255, 255);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          padding: 5px;
+          z-index: 1;
+          margin-bottom: 10;
+        }
+        
+        .product-search-bar-outter-wrapper {
+          height: 40px;
+          width: 570px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+          margin-bottom: 10px;
+          padding: 5px 0px 0px 10px;
+          overflow: hidden;
+          position: absolute;
+          z-index: 1;
+          top: 100px;
+          left: 0;
+          width: 100%;
+          padding: 10px;
+          box-sizing: border-box;
+        }
+        
+      .product-search-bar-outter-wrapper:hover {
+        background-color: #ffffff;
+        border-radius: round;
+      }
+
+      .product-search-bar-select {
+        width: 100px;
+        height: 30px;
+        cursor: pointer;
+        margin-left: 15px;
+        border-radius: round;
+        overflow: hidden;
+      }   
+      
+      .product-search-bar-clickable:hover {
+        cursor: pointer;
+        background-color: rgb(233, 233, 233); 
+      }
+
+        /* Add a new class to style the search results container */
+        .product-search-results {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background-color: #ffffff;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          z-index: 9999;
+        }
+
+      .product-search-bar-product-title {
+      }
+    
+
+          /* <--- --- |SEPARATE PRODUCTS RECEIPT COMPONENT STYLING | --- ---> */
+      .separate-product-receipt-wrapper {
+        width: 345px;
+        height: 525px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 50px 0px 10px;
+        text-align: center;
+
+      }
+
+      .product-receipt-products-display-section {
+        width: 350px;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+     
+      }
+      .products-receipt-products-holder {
+        width: 340px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 8px; 
+      }
+
+               /* <--- --- |PRODUCT DISPLAY IN RECEIPT COMPONENT STYLING | --- ---> */    
+      .product-display-receipt-wrapper {
+        width: 400px;
+        height: 40px;
+        margin-bottom: 10px;
+        margin-top: 5px;
+      }
+      .product-display-receipt-delete {
+        border-right: 2px solid grey;
+        padding-right: 8px;
+      }
+      .product-display-receipt-icon-minus :hover {
+        cursor: pointer;
+      }
+      .product-display-receipt-main-cont {
+        height: 40px;
+        display: flex;
+        align-items: flex-start;
+        margin-left: 9px;
+        border-bottom: 2px solid grey;
+        padding-bottom: 5px;
+      }
+      .product-display-receipt-name {
+        width: 152px;
+        height: 32px;
+        max-width: 175px;
+        min-width: 175px;
+        text-align: left;
+      }
+      .product-display-receipt-price {
+        margin-left: 9px;
+      }
+      .product-display-receipt-amount {
+        width: 24px;
+        height: 17px;
+        border: 0.5px solid black;
+        border-radius: 3px;
+        align-content: center;
+        margin-left: 13px;
+      }
+
+      
+          /* <--- --- |KIT RECEIPT BOTTOM SECTION COMPONENT STYLING | --- ---> */
+      .kit-receipt-bottom-price-details-holder {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 15px;
+        padding-left: 15px;
+      }
+      .kit-price-details-total-price {
+        text-align: left;
+      }
+
+
+  /***  <==== === ! | LANDING PAGE | ! === ====>  ***/
+
+  .landing-page-content-wrapper{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .landing-page-inner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .landing-page-welcome-header {
+    color: rgb(124, 124, 124);
+  }
+  .email-input-field {
+    width: 370px;
+    height: 45px;
+  }
+
+  .email-validation{
+    color: red;
+    position: absolute;
+    margin-top: 190px;
+  }
+
+  .form-btn{
+    color: rgb(228, 228, 228);
+    margin-bottom: 108px;
+  }
+
+  
+  /***  <==== === ! | TYPE OF ORDER PAGE | ! === ====>  ***/
+
+  .TypeOfOrder-page-content-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .TypeOfOrder-page-route-choice-holder {
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 177px;
+  }
+
+  .TypeOfOrder-page-route-choice-hold{
+    margin-bottom: 173px;
+  }
+
+  .TypeOfOrder-page-choice-item {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .TypeOfOrder-page-choice-text {
+    position: relative;
+  }
+
+  .route-choice-input {
+    width: 30px;
+    height: 30px;
+  }
+  
+     /***  <==== === ! | PRODUCT SELECTION PAGE | ! === ====>  ***/
+
+    .page-widgets-holder {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 25px;
+    }
+
+
+
+     /***  <==== === ! | PRODUCT SELECTION PAGE (SP) | ! === ====>  ***/
+  
+
+    
+    /***  <==== === ! | CONTACTS PAGE | ! === ====>  ***/
+
+    .contact-info-page-widgets-holder {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 25px;
+    }
+
+
+          /* <--- --- | PAGE LEFT SIDE CONTACTS COMPONENT STYLING | --- ---> */
+    
+    .page-left-side-contacts-wrapper {
+      width: 775px;
+      height: 525px;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 40px 70px;
+      margin: 20px 10px 3px 50px;
+    }
+    .contacts-page-heading {
+      margin-bottom: 10px
+    }
+    .page-left-side-contacts-column {
+      width: 327px;
+    }
+    .page-left-side-contacts-left-column {
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .personal-contact-info-block {
+      width: 100%;
+      display: flex;  
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 55px;
+    }
+    .address-contact-info-block {
+      width: 100%;
+      
+    }
+
+    .contacts-page-small-inputs-holder {
+      width: 275px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 5px;
+    }
+    .contacts-page-input-field {
+      width: 275px;
+      height: 32px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+    .contacts-page-input-field-small {
+      width: 130px;
+    }
+    .address-contact-info-block {
+      display: flex;
+      flex-direction: column;
+    }
+      
+  
+
+          /***  <==== === ! | FINAL CHECK PAGE | ! === ====>  ***/
+
+     
+           /* <--- --- | PAGE LEFT SIDE - FINAL CHECK COMPONENT STYLING | --- ---> */       
+    
+    .page-left-side-contacts-top-section {
+      width: 100%;
+      height: 58px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+     }
+     .page-left-side-contacts-add-more-holder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+     }      
+    .final-check-product-table {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 6px;
+    }
+    .final-check-product-table-row .final-check-product-table-head {
+      height: 45px;
+      padding: 7px 2px;
+    }
+    .final-check-product-table-row  {
+      height: 54px;
+      display: flex;
+      align-items: center;
+      padding: 5px;
+      border-bottom: 1.3px solid #B5B5B4;
+    }
+    .final-check-product-table-I-tag-field {
+      width: 56px;
+      
+    }
+    .final-check-product-table-name-field {
+      width: 385px;
+      
+    }
+    .final-check-product-table-total-field {
+      width: 116px;
+      padding-left: 14px;
+     
+    }
+    .final-check-product-table-amount-field {
+      width: 123px;
+    
+    }
+    .final-check-product-table-amount-field-flex {
+      display: flex;
+    }
+    
+        /* <--- --- | PAGE LEFT SIDE POP-UP MESSAGE COMPONENT STYLING | --- ---> */ 
+        
+    .final-check-page-pop-up-wrapper {
+      width: 600px;
+      height: 200px;
+      position: absolute;
+      top: 34%;
+      left: 30%;
+      background-color: #ffffff;
+      border: 1px solid black;
+      padding: 30px 50px;
+      
+    }
+    .final-check-pop-up-top-section {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      
+    }
+    
+           /* <--- --- | FINAL CHECK ITEM DISPLAY COMPONENT STYLING | --- ---> */      
+    .final-check-product-table-amount-btn {
+      width: 45px;
+      height: 25px;
+      border: 1px solid black;
+      align-content: center;
+      margin-right: 19px;
+      margin-left: 19px;
+    }
+    .final-check-product-table-price {
+      width: 32px;
+      height: 21.18px;
+      text-align: center;
+      align-content: center;
+    }
+    .trash-icon:hover {
+      cursor: pointer;
+    }
+
+
+
+
+      /***  <==== === ! | OUTRO PAGE | ! === ====>  ***/
+    .outro-page-content-wrapper {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .outro-page-outro-header {
+      margin-bottom: -10px;
+    }
+    
+
+
+
+
+     /***  <==== === ! | DELETE LATER | ! === ====>  ***/
+    .receipt-holder {
+      display: flex;
+      flex-direction: column;
+      margin: 20px 50px 3px 10px;
+      text-align: center;
+    }
+
+    .ReceiptPriceL{
+      text-align: center;
+    }
+
+    .line-3{
+    width: 310px;
+    height: 2px;
+    background-color: grey;
+    margin-top: 50px;
+    }
+
+    .scroll-section{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    .basket-scroll-section{
+      width: 100%;
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    .basket-scroll-section-h{
+      width: 100%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    
+    .scroll-section::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+      background-color: #c4c4c4;
+      border-radius: 5px;
+    }
+
+    .basket-scroll-section::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+      background-color: #c4c4c4;
+      border-radius: 5px;
+    }
+    
+    .scroll-section::-webkit-scrollbar-thumb {
+      background-color: #551C50;
+      border-radius: 5px;
+    }
+
+    .basket-scroll-section::-webkit-scrollbar-thumb {
+      background-color: #551C50;
+      border-radius: 5px;
+    }
+    
+    .delivery-date-info-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .final-check-product-table {
+      display: block;
+      /* other CSS styles */
+    }
+
+    .item-display-basket {
+      margin-bottom: 13px;
+      border-top: 1px solid rgba(223, 223, 223, 0.091);
+    }
+
+    
+
+    .type-of-order-box-icon {
+      font-size: 25pt;
+    }
+    
+
+
+
+    
+
