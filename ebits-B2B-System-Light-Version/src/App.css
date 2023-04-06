@@ -172,49 +172,23 @@ img {
     }
         /* <--- --- | SEARCH BAR PRODUCT DISPLAY COMPONENT STYLING | --- ---> */
 
-        .product-search-bar {
+      .product-search-bar {
           display: flex;
           align-items: center;
           position: relative;
-          left: 0;
-          width: 100%;
-          background-color: rgb(255, 255, 255);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-          padding: 5px;
-          z-index: 1;
-        }
-
-        .product-search-bar-h {
-          display: flex;
-          align-items: center;
-          position: relative;
-          left: 0;
-          width: 100%;
-          background-color: rgb(255, 255, 255);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-          padding: 5px;
-          z-index: 1;
-          margin-bottom: 10;
-        }
+          margin-bottom: 5px;
+          top: 0;
+      }
         
-        .product-search-bar-outter-wrapper {
+      .product-search-bar-outter-wrapper {
           height: 40px;
           width: 570px;
           display: flex;
           flex-direction: row;
-          justify-content: space-around;
+          justify-content: space-between;
           align-items: center;
-          margin-bottom: 10px;
-          padding: 5px 0px 0px 10px;
-          overflow: hidden;
-          position: absolute;
-          z-index: 1;
-          top: 100px;
-          left: 0;
-          width: 100%;
-          padding: 10px;
-          box-sizing: border-box;
-        }
+          position: relative;
+      }
         
       .product-search-bar-outter-wrapper:hover {
         background-color: #ffffff;
@@ -226,13 +200,12 @@ img {
         height: 30px;
         cursor: pointer;
         margin-left: 15px;
-        border-radius: round;
-        overflow: hidden;
+        border-radius: 5px;
       }   
       
       .product-search-bar-clickable:hover {
         cursor: pointer;
-        background-color: rgb(233, 233, 233); 
+        background-color: rgb(233, 233, 233);
       }
 
         /* Add a new class to style the search results container */

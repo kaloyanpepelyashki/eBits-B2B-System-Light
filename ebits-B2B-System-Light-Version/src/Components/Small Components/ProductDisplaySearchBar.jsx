@@ -83,6 +83,7 @@ export default React.memo(function ProductSearchBar({ product, addProduct }) {
             focus:outline-none"
     >
       <select
+        style={{ padding: "5px", zIndex: 1  }}
         onChange={(e) => {
           handleVariationChoice(e);
         }}
