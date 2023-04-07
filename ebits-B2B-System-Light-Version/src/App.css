@@ -195,7 +195,7 @@ img {
     }
         /* <--- --- | SEARCH BAR PRODUCT DISPLAY COMPONENT STYLING | --- ---> */
 
-        .product-search-bar {
+      .product-search-bar {
           display: flex;
           align-items: center;
           position: relative;
@@ -256,7 +256,7 @@ img {
       
       .product-searchbar-clickable-space:hover {
         cursor: pointer;
-        background-color: rgb(233, 233, 233); 
+        background-color: rgb(233, 233, 233);
       }
 
         /* Add a new class to style the search results container */
