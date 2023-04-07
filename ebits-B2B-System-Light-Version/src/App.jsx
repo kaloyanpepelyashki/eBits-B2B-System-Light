@@ -19,6 +19,8 @@ import HeaderBar from "./Components/Global Components/HeaderBar";
 import FinalCheckPage from "./Pages/Global pages/FinalCheckPage";
 import OutroPage from "./Pages/Global pages/OutroPage";
 import ProductSelectionPage from "./Pages/Global pages/ProductSelectionPage";
+import AskToSave from "./Pages/Global pages/AskToSave";
+import ContactInfoPage from "./Pages/Global pages/ContactsPage";
 
 function App() {
   //Fetching data from the server
@@ -59,11 +61,13 @@ function App() {
                 path="/select-products"
                 element={<ProductSelectionPage productsList={productsList} />}
               />
+              <Route path="/BuyorExport" element={<AskToSave />} />
+              <Route path="/thankYou" element={<OutroPage />} />
+              <Route path="/contactInfo-Page" element={<ContactInfoPage />} />
               <Route
                 path="/finalChackPage"
                 element={<FinalCheckPage productList={productsList} />}
               />
-              <Route path="/thankYou" element={<OutroPage />} />
             </Routes>
           </ShoppingCartProvider>
         </ContactInfoContProvider>

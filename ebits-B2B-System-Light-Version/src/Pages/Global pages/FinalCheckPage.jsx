@@ -26,7 +26,9 @@ export default function FinalCheckPage(props) {
 
   const { cartProducts } = useContext(ShoppingCartFunc);
 
-  const { contactInfoState } = useContext(ContactsInformationFunc);
+  const queryState = location.state.typeOfQuery;
+
+  console.log(location.state.typeOfQuery);
 
   // const sendQuery = () => {
   //   axios
@@ -50,6 +52,8 @@ export default function FinalCheckPage(props) {
   const handleTransfer = () => {
     navigate("/thankYou");
   };
+
+  console.log(queryState);
   return (
     <>
       <main className="final-check-page-content-wrapper page-main-section">
@@ -61,15 +65,11 @@ export default function FinalCheckPage(props) {
                 productList={productList}
                 cartProducts={cartProducts}
               >
-                {location.state.contactsPageType === "separateProductsBuy" ? (
-                  ""
+                {queryState === "orderLink" ? (
+                  " "
                 ) : (
                   <PageLeftTopSection>
-                    {location.state.contactsPageType === "kitBuy" ? (
-                      <AmountPicker />
-                    ) : (
-                      ""
-                    )}
+                    <AmountPicker />
                   </PageLeftTopSection>
                 )}
               </PageLeftSideFinalCheckPage>

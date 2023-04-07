@@ -5,7 +5,11 @@ export const ShoppingCartFunc = createContext();
 
 export const ShoppingCartProvider = (props) => {
   const [cartProducts, setCartProducts] = useState([]);
+  const [isKit, setIsKit] = useState(false);
   const [kitAmount, setKitAmount] = useState(1);
+
+  //TODO Assign the getter and the setter for the typeOfQuery state variable
+
   let total = 0;
   cartProducts.map((product) => (total = total + product.qty * product.Price));
 
@@ -174,6 +178,8 @@ export const ShoppingCartProvider = (props) => {
         cartProducts,
         funcs,
         setCartProducts,
+        isKit,
+        setIsKit,
         kitAmount,
         setKitAmount,
         total,

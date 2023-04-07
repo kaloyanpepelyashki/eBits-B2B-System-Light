@@ -32,5 +32,5 @@ export default {
       ReceiptPriceM: "30pt",
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

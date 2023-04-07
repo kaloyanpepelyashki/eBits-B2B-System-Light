@@ -55,13 +55,13 @@ export default function PageLeftSide(props) {
     <>
       <div
         className="page-left-side-wrapper block px-4 py-6 mb-14 bg-white border-white border-slate-300 rounded-sm text-sm shadow-2xl
-            focus:outline-none relative"
+            focus:outline-none "
       >
         {props.children}
         <div className="page-left-side-main-section">
           {/* <= //The input field the user types in */}
           <input
-            className="page-left-side-search-bar block px-4 py-2 pr-80 bg-white border-white border-slate-300 rounded-sm text-sm shadow-md
+            className="page-left-side-search-bar block px-4 py-2 pr-80 bg-white border-white  rounded-sm text-sm shadow-md
             focus:outline-none"
             type="text"
             placeholder="Product name here..."
@@ -71,38 +71,42 @@ export default function PageLeftSide(props) {
             icon={faMagnifyingGlass}
             className="icon absolute -mt-10 py-0"
           />
-
-          {Array.isArray(filterFunc) && searchQuerry !== ""
-            ? filterFunc
-                .slice(0, 3)
-                .map((product) => (
-                  <ProductSearchBar
-                    product={product}
-                    addProduct={handleAddProduct}
-                    key={product.ProductIndex}
-                  />
-                ))
-            : " "}
-          <div className="line line-2"></div>
+          <div className="search-result-container-scroll">
+            {Array.isArray(filterFunc) && searchQuerry !== ""
+              ? filterFunc
+                  .slice(0, 6)
+                  .map((product) => (
+                    <ProductSearchBar
+                      product={product}
+                      addProduct={handleAddProduct}
+                      key={product.ProductIndex}
+                    />
+                  ))
+              : " "}
+          </div>
         </div>
-        <h2 className="text-cardText font-bold text-primary-color">
-          Your products :
-        </h2>
-        <div className="basket-scroll-section">
+        <div className="line line-2"></div>
+        <div className="page-left-side-basket-section">
+          <h2 className="text-cardText font-bold text-primary-color">
+            Your products :
+          </h2>
+
           <div className="page-left-side-bottom-section">
-            {cartProducts.map((product) =>
-              product.qty > 0 && product.varQty > 0 ? (
-                <BasketProductsDisplay
-                  key={product.productBaksetUnqKey}
-                  product={product}
-                  handleIncreaseProductAmount={handleIncreaseProductAmount}
-                  handleReduceProductAmount={handleReduceProductAmount}
-                  handleRemoveProduct={handleRemoveProduct}
-                />
-              ) : (
-                ""
-              )
-            )}
+            <div className="basket-scroll-section">
+              {cartProducts.map((product) =>
+                product.qty > 0 && product.varQty > 0 ? (
+                  <BasketProductsDisplay
+                    key={product.productBaksetUnqKey}
+                    product={product}
+                    handleIncreaseProductAmount={handleIncreaseProductAmount}
+                    handleReduceProductAmount={handleReduceProductAmount}
+                    handleRemoveProduct={handleRemoveProduct}
+                  />
+                ) : (
+                  ""
+                )
+              )}
+            </div>
           </div>
         </div>
       </div>

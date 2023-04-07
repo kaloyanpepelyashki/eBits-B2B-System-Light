@@ -5,12 +5,29 @@ import { useContext } from "react";
 import { ShoppingCartFunc } from "../Context Components/ShoppingCartFuncContext";
 
 export default function PageLeftTopSection(props) {
-  const { setKitAmount } = useContext(ShoppingCartFunc);
+  const { setKitAmount, isKit, setIsKit } = useContext(ShoppingCartFunc);
+
+  const handleCheck = (e) => {
+    setIsKit(e.target.checked);
+  };
 
   return (
     <>
       <div className="page-left-side-top-section">
-        <h1 className="text-TextXL text-primary-color ml-5">Kit</h1>
+        <input
+          type="checkbox"
+          className="bg-gray-50 border-grey-300 focus:ring-4 focus:ring-primary-color  h-6 w-6 rounded text-primary-color text-red-600"
+          onChange={(e) => handleCheck(e)}
+        />
+        <h1
+          className={
+            isKit
+              ? "text-TextLarge text-primary-color ml-1"
+              : "text-TextLarge text-txt-grey-color ml-1"
+          }
+        >
+          Kit
+        </h1>
         {props.children}
       </div>
       <div className="line"></div>

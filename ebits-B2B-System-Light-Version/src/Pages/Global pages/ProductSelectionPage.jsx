@@ -22,11 +22,7 @@ export default function ProductSelectionPage({ productsList }) {
 
   const handleTransfer = () => {
     if (cartProducts.filter((product) => product.qty !== 0).length !== 0) {
-      navigate("/contactInfoPage", {
-        state: {
-          contactsPageType: "kitBuy",
-        },
-      });
+      navigate("/BuyorExport");
     }
     if (kitAmount <= 0) {
       window.alert("Kit Amount cannot be 0");
