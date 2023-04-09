@@ -20,6 +20,7 @@ export default {
       TextBig: "25pt",
       TextMid: "20pt",
       TextSmall: "14pt",
+      TextXS: "11pt",
       GlobalBtnsTxt: "15pt",
       HeadingSmall: "16pt",
       cardText: "14pt",

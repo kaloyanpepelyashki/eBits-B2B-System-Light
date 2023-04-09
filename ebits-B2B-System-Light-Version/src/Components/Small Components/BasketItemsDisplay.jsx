@@ -1,4 +1,9 @@
 import { useEffect, useState } from "react";
+import ProductAmountHandler from "./AtomicComponents/ProductAmountHandler";
+
+//Importing Font Awesome and Font Awesome components
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleInfo, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 export default function BasketProductsDisplay(props) {
   const {
@@ -39,34 +44,26 @@ export default function BasketProductsDisplay(props) {
           </div>
 
           <div className="flex items-center">
-            <button
-              className="inline-block font-bold mt-1 mx-2 border border-solid px-2 -ml-2 -mr-2"
+            <ProductAmountHandler
+              product={product}
+              handleIncreaseProductAmount={handleIncreaseProductAmount}
+              handleReduceProductAmount={handleReduceProductAmount}
+            />
+            <FontAwesomeIcon
+              icon={faTrash}
+              className="trash-icon final-check-product-icon"
               onClick={() => {
-                handleIncreaseProductAmount(product);
+                handleRemoveProduct(product);
               }}
-            >
-              +
-            </button>
-
-            <h2 className="final-check-product-table-price text-ProductAmountIndex mt-1 mx-2">
-              <b>{product.qty}</b>
-            </h2>
-
-            <button
-              className="inline-block font-bold mt-1 mx-2 border border-solid px-2 -ml-2 mr-10"
-              onClick={() => {
-                handleReduceProductAmount(product);
-              }}
-            >
-              -
-            </button>
-
+            />
             <p className="text-right inline-block text-ProductTitleMedium font-extrabold w-32">
               {(Number(product.Price) * Number(product.qty)).toFixed(2)}
               &nbsp;Dkk
             </p>
           </div>
         </div>
+        {/* //TODO MAKE THE DESCRIPTION MESSAGE //TODO MAKE THE DESCRIPTION MESSAGE
+        POP-UP ON HOVER ON THE INFORMATION ICON */}
       </div>
     </div>
   );

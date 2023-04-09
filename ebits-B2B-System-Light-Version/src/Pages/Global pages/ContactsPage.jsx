@@ -15,6 +15,7 @@ import KitReceiptBottomSection from "../../Components/Small Components/KitBuyRec
 import PageLeftSideStaticContacts from "../../Components/Small Components/PageLeftSideStaticContacts";
 import PageLeftSideStaticContactsShort from "../../Components/Small Components/PageLeftSideStaticContactShort";
 import { ShoppingCartFunc } from "../../Components/Context Components/ShoppingCartFuncContext";
+import ReceiptHandler from "../../Components/Global Components/ReceiptHandler";
 
 export default function ContactInfoPage() {
   const { contactInfoState } = useContext(ContactsInformationFunc);
@@ -63,9 +64,7 @@ export default function ContactInfoPage() {
                 <PageLeftSideStaticContactsShort />
               )}
             </div>
-            <KitReceipt>
-              <KitReceiptBottomSection />
-            </KitReceipt>
+            <ReceiptHandler />
           </div>
         </div>
         <div className="buttons-holder-h">

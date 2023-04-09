@@ -12,6 +12,7 @@ export default function KitReceipt(props) {
     cartProducts,
     funcs: { reduceProductAmount },
     total,
+    isKit,
   } = useContext(ShoppingCartFunc);
 
   const handleReduceProductAmount = (product) => {
@@ -22,7 +23,7 @@ export default function KitReceipt(props) {
     <>
       <div className="separate-product-receipt-wrapper block px-4 py-6 mt-14 pb-56 bg-white border-white border-slate-300 rounded-sm text-sm shadow-2xl ">
         <h1 className="text-total text-TextMid text-primary-color font-bold">
-          Kit
+          {isKit ? "Kit" : "Total"}
         </h1>
 
         <div className="flex justify-center items-center">
@@ -61,7 +62,7 @@ export default function KitReceipt(props) {
               )
             )}
           </div>
-          <div className="line line-3"></div>
+          {isKit ? <div className="line line-3"></div> : ""}
         </div>
         {props.children}
       </div>

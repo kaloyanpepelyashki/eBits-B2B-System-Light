@@ -46,6 +46,7 @@ img {
   overflow: hidden;
 }
 .page-main-section {
+  padding-bottom: 200px;
   height: 100vh;
 }
 
@@ -74,10 +75,12 @@ img {
 
   /* <--- --- | PROCESS MICRO COPY COMPONENT STYLING | --- ---> */
 .process-micro-copy-holder {
-  height: 30px;
+  width: 100%;
+  height: 20px;
   display: flex;
   align-items: center;
-  width: 100%;
+  padding-top: 10px;
+ 
 }
 
 
@@ -89,6 +92,7 @@ img {
     left: 0;
     right: 0;
     background-color: transparent;
+    margin-bottom: 15px;
   }
   
   /* .buttons-holder-h {

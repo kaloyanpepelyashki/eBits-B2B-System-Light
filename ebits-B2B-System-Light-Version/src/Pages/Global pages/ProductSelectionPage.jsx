@@ -15,6 +15,7 @@ import PageLeftTopSection from "../../Components/Global Components/PageLeftSideT
 import AmountPicker from "../../Components/Small Components/AtomicComponents/AmountPicker";
 import ProcessMicroCopy from "../../Components/Global Components/MicroCopy";
 import ButtonsHolder from "../../Components/Global Components/ButtonsHolderComponent";
+import ReceiptHandler from "../../Components/Global Components/ReceiptHandler";
 
 export default function ProductSelectionPage({ productsList }) {
   const navigate = useNavigate();
@@ -44,9 +45,7 @@ export default function ProductSelectionPage({ productsList }) {
                 </PageLeftTopSection>
               </PageLeftSide>
             </div>
-            <KitReceipt>
-              <KitReceiptBottomSection />
-            </KitReceipt>
+            <ReceiptHandler />
           </div>
         </div>
         <div className="buttons-holder-h">

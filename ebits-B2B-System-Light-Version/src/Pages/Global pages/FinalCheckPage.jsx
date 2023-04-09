@@ -17,6 +17,7 @@ import PageLeftTopSection from "../../Components/Global Components/PageLeftSideT
 import AmountPicker from "../../Components/Small Components/AtomicComponents/AmountPicker";
 import ProcessMicroCopy from "../../Components/Global Components/MicroCopy";
 import PageLeftSideFinalCheckPage from "../../Components/Global Components/PageLeftSideFinalCheckPage";
+import ReceiptHandler from "../../Components/Global Components/ReceiptHandler";
 
 export default function FinalCheckPage(props) {
   const navigate = useNavigate();
@@ -68,9 +69,7 @@ export default function FinalCheckPage(props) {
                 )}
               </PageLeftSideFinalCheckPage>
             </div>
-            <KitReceipt>
-              <KitReceiptBottomSection />
-            </KitReceipt>
+            <ReceiptHandler />
           </div>
         </div>
         <div className="buttons-holder-h">
@@ -82,5 +81,6 @@ export default function FinalCheckPage(props) {
         </div>
       </main>
     </>
+    //*! Important
   );
 }
