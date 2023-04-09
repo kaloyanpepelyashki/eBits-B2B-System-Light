@@ -4,9 +4,18 @@ import { faMinus } from "@fortawesome/free-solid-svg-icons";
 
 export default function ProductDisplayReceipt(props) {
   const { product, handleReduceProductAmount } = props;
+  const DisplayNameVar = () => {
+    return (
+      <>
+        {product.ProductName}
+        <br />
+        {product.VariationName}
+      </>
+    );
+  };
   return (
     <>
-      <div className="product-display-receipt-wrapper flex justify-start">
+      <div className="product-display-receipt-wrapper flex justify-start text-txt-grey-color">
         <div className="product-display-receipt-delete">
           <FontAwesomeIcon
             icon={faMinus}
@@ -20,9 +29,11 @@ export default function ProductDisplayReceipt(props) {
         <div className="product-display-receipt-main-cont">
           <div className="product-display-receipt-name">
             <p className="text-VariationTitleSmall">
-              {product.ProductName}
-              <br />
-              {product.VariationName}
+              {product.ProductName === product.VariationName ? (
+                product.ProductName
+              ) : (
+                <DisplayNameVar />
+              )}
             </p>
           </div>
           <div className="product-display-receipt-price">

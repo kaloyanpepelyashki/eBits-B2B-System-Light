@@ -19,16 +19,11 @@ import ProcessMicroCopy from "../../Components/Global Components/MicroCopy";
 import PageLeftSideFinalCheckPage from "../../Components/Global Components/PageLeftSideFinalCheckPage";
 
 export default function FinalCheckPage(props) {
-  const location = useLocation();
   const navigate = useNavigate();
 
   const { productList } = props;
 
-  const { cartProducts } = useContext(ShoppingCartFunc);
-
-  const queryState = location.state.typeOfQuery;
-
-  console.log(location.state.typeOfQuery);
+  const { cartProducts, typeOfQuerry } = useContext(ShoppingCartFunc);
 
   // const sendQuery = () => {
   //   axios
@@ -53,7 +48,6 @@ export default function FinalCheckPage(props) {
     navigate("/thankYou");
   };
 
-  console.log(queryState);
   return (
     <>
       <main className="final-check-page-content-wrapper page-main-section">
@@ -65,7 +59,7 @@ export default function FinalCheckPage(props) {
                 productList={productList}
                 cartProducts={cartProducts}
               >
-                {queryState === "orderLink" ? (
+                {typeOfQuerry === 2 ? (
                   " "
                 ) : (
                   <PageLeftTopSection>

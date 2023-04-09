@@ -14,17 +14,16 @@ import ProcessMicroCopy from "../../Components/Global Components/MicroCopy";
 import KitReceiptBottomSection from "../../Components/Small Components/KitBuyReceiptBottomSection";
 import PageLeftSideStaticContacts from "../../Components/Small Components/PageLeftSideStaticContacts";
 import PageLeftSideStaticContactsShort from "../../Components/Small Components/PageLeftSideStaticContactShort";
+import { ShoppingCartFunc } from "../../Components/Context Components/ShoppingCartFuncContext";
 
 export default function ContactInfoPage() {
   const { contactInfoState } = useContext(ContactsInformationFunc);
+  const { typeOfQuerry } = useContext(ShoppingCartFunc);
 
   const navigate = useNavigate();
-  const location = useLocation();
-
-  const queryState = location.state.typeOfQuery;
 
   const handleTransfer = () => {
-    if (queryState === "orderLink") {
+    if (typeOfQuerry === 2) {
       if (!contactInfoState.Name) {
         window.alert("Please tell us your name");
       }
@@ -37,29 +36,19 @@ export default function ContactInfoPage() {
       if (!contactInfoState.phone) {
         window.alert("Please tell us your phone");
       } else {
-        navigate("/finalChackPage", {
-          state: {
-            typeOfQuerry: queryState,
-          },
-        });
+        navigate("/finalChackPage");
       }
     }
-    if (queryState === "orderProducts") {
+    if (typeOfQuerry === 1) {
       Object.keys(contactInfoState).map((key) => {
         if (!contactInfoState[key] && contactInfoState[key].length <= 0) {
           window.alert(`Please provide us with ${key}`);
         } else {
-          navigate("/finalChackPage", {
-            state: {
-              typeOfQuerry: queryState,
-            },
-          });
+          navigate("/finalChackPage");
         }
       });
     }
   };
-
-  console.log(queryState);
 
   return (
     <>
@@ -68,7 +57,7 @@ export default function ContactInfoPage() {
           <div className="contact-info-page-widgets-holder">
             <div>
               <ProcessMicroCopy processStep={2} />
-              {queryState === "orderProducts" ? (
+              {typeOfQuerry == 1 ? (
                 <PageLeftSideStaticContacts />
               ) : (
                 <PageLeftSideStaticContactsShort />

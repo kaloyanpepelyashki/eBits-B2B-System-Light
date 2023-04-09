@@ -1,28 +1,35 @@
 //Importing React hooks
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 //Importing React-router elements, components and hooks
 import { useNavigate } from "react-router";
 
 //Importing Components
 import ButtonsHolder from "../../Components/Global Components/ButtonsHolderComponent";
+import { ShoppingCartFunc } from "../../Components/Context Components/ShoppingCartFuncContext";
 
 export default function AskToSave() {
   const navigate = useNavigate();
   const [routeChoice, setRouteChoice] = useState(0);
+  const { typeOfQuerry, setTypeOfQuerry } = useContext(ShoppingCartFunc);
 
   //TODO Set the typeOfQuery to be on the shopping cart func context component
+
+  useEffect(() => {
+    if (routeChoice == 1) {
+      setTypeOfQuerry(1);
+    }
+    if (routeChoice == 2) {
+      setTypeOfQuerry(2);
+    }
+  }, [routeChoice]);
 
   //The logic for the order type
   const nextPageState =
     routeChoice == 1
-      ? navigate("/contactInfo-Page", {
-          state: { typeOfQuery: "orderProducts" },
-        })
+      ? navigate("/contactInfo-Page")
       : routeChoice == 2
-      ? navigate("/contactInfo-Page", {
-          state: { typeOfQuery: "orderLink" },
-        })
+      ? navigate("/contactInfo-Page")
       : "";
 
   //Initiating the page transfer function
@@ -53,6 +60,7 @@ export default function AskToSave() {
                 value="2"
                 onChange={(e) => {
                   setRouteChoice(e.target.value);
+                  setTypeOfQuerry(e.target.value);
                 }}
               />
               <p className="TypeOfOrder-page-choice-text font-semibold text-TextLarge">
@@ -67,6 +75,7 @@ export default function AskToSave() {
                 value="1"
                 onChange={(e) => {
                   setRouteChoice(e.target.value);
+                  setTypeOfQuerry(e.target.value);
                 }}
               />
               <p className="TypeOfOrder-page-choice-text font-bold text-TextLarge">

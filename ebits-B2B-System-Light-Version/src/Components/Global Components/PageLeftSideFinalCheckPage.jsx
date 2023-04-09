@@ -94,7 +94,7 @@ export default function PageLeftSideFinalCheckPage(props) {
                     <th className="final-check-product-table-delete-field"></th>
                   </tr>
                 </thead>
-                <tbody style={{ visibility: "visible" }}>
+                <tbody style={{ visibility: "visible", overflow: "auto" }}>
                   {cartProducts.map((product) =>
                     product.qty > 0 && product.varQty > 0 ? (
                       <ProductDisplayFinalCheckPage

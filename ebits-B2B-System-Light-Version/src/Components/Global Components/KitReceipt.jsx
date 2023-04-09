@@ -21,10 +21,12 @@ export default function KitReceipt(props) {
   return (
     <>
       <div className="separate-product-receipt-wrapper block px-4 py-6 mt-14 pb-56 bg-white border-white border-slate-300 rounded-sm text-sm shadow-2xl ">
-        <h1 className="text-total text-TextMid text-primary-color">Kit</h1>
+        <h1 className="text-total text-TextMid text-primary-color font-bold">
+          Kit
+        </h1>
 
         <div className="flex justify-center items-center">
-          <p className="text-primary-color font-bold text-ProductTitleSmall mr-4 -mb-8">
+          <p className="text-primary-color text-ProductTitleSmall mr-4 -mb-8">
             Ex VAT
           </p>
 
@@ -43,7 +45,7 @@ export default function KitReceipt(props) {
 
         <div className="line line-3 mt-1.5"></div>
         <div className="product-receipt-products-display-section">
-          <h1 className="text-cardText text-primary-color mt-4 mr-40">
+          <h1 className="text-cardText text-primary-color mt-4 mr-40 font-bold">
             Products:
           </h1>
           <div className="scroll-section">

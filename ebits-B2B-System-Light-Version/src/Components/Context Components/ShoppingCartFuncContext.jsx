@@ -7,8 +7,9 @@ export const ShoppingCartProvider = (props) => {
   const [cartProducts, setCartProducts] = useState([]);
   const [isKit, setIsKit] = useState(false);
   const [kitAmount, setKitAmount] = useState(1);
-
   //TODO Assign the getter and the setter for the typeOfQuery state variable
+  //TODO Figure out the logic behind the typeOfQuerry state variable
+  const [typeOfQuerry, setTypeOfQuerry] = useState(0);
 
   let total = 0;
   cartProducts.map((product) => (total = total + product.qty * product.Price));
@@ -183,6 +184,8 @@ export const ShoppingCartProvider = (props) => {
         kitAmount,
         setKitAmount,
         total,
+        typeOfQuerry,
+        setTypeOfQuerry,
       }}
     >
       {props.children}

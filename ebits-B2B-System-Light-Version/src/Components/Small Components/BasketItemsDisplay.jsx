@@ -9,6 +9,16 @@ export default function BasketProductsDisplay(props) {
     setGlobalPrices,
   } = props;
 
+  const DisplayNameVar = () => {
+    return (
+      <>
+        {product.ProductName}
+        <br />
+        {product.VariationName}
+      </>
+    );
+  };
+
   return (
     <div className="item-display-basket">
       <div className="bg-white border-white rounded-sm text-sm shadow-md focus:outline-none">
@@ -20,9 +30,11 @@ export default function BasketProductsDisplay(props) {
               alt={product.ProductName}
             />
             <h2 className="inline-block font-bold text-ProductTitleSmall">
-              {product.productName}
-              <br />
-              {product.VariationName}
+              {product.ProductName === product.VariationName ? (
+                product.ProductName
+              ) : (
+                <DisplayNameVar />
+              )}
             </h2>
           </div>
 

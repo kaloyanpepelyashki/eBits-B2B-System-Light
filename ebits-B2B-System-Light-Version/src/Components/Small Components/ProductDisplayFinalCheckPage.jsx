@@ -10,6 +10,16 @@ export default function ProductDisplayFinalCheckPage(props) {
     handleRemoveProduct,
   } = props;
 
+  const DisplayNameVar = () => {
+    return (
+      <>
+        {product.ProductName}
+        <br />
+        {product.VariationName}
+      </>
+    );
+  };
+
   return (
     <>
       <tr className="final-check-product-table-row-item">
@@ -21,9 +31,12 @@ export default function ProductDisplayFinalCheckPage(props) {
         </td>
         <tr className="final-check-product-table-row">
           <td className="final-check-product-table-name-field text-ProductTitleSmall">
-            {product.VariationName
-              ? product.ProductName + " " + product.VariationName
-              : product.ProductName}
+            {product.VariationName &&
+            product.ProductName !== product.VariationName ? (
+              <DisplayNameVar />
+            ) : (
+              product.ProductName
+            )}
           </td>
         </tr>
         <td className="final-check-product-table-total-field text-ProductTitleMedium">

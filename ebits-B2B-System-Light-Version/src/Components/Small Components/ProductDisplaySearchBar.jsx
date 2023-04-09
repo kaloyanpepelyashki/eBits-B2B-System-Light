@@ -1,10 +1,6 @@
 //Importing React hooks
 import React, { useState, useEffect } from "react";
 
-//Importing Font Awesome and Font Awesome components
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
-
 export default React.memo(function ProductSearchBar({ product, addProduct }) {
   const [productWithVar, setProductWithVar] = useState({});
   const [variationAndPrice, setVariationAndPrice] = useState([]);

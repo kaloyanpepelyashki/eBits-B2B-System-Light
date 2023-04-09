@@ -7,6 +7,7 @@
 
 #root {
   width: 100vw;
+  height: 100%;
 }
 html {
   height: 100vh;
@@ -40,7 +41,13 @@ img {
   /**** <<=====                                                      ****/
   /****               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^                   ****/
 
-
+.App {
+  height: 100vh;
+  overflow: hidden;
+}
+.page-main-section {
+  height: 100vh;
+}
 
 
   /* <--- --- | HEADER-BAR COMPONENT STYLING | --- ---> */
@@ -50,14 +57,14 @@ img {
 }
 .application-header-bar-inner {
   width: 100%;
-  height: 90px;
+  height: 80px;
   display: flex;
   align-items: center;
   padding-left: 27px;
 }
 .application-header-bar-company-logo {
-  width: 140px;
-  height: 68px;
+  width: 130px;
+  height: 58px;
 }
 .application-header-bar-empty-side {
   width: 100%;
@@ -67,7 +74,7 @@ img {
 
   /* <--- --- | PROCESS MICRO COPY COMPONENT STYLING | --- ---> */
 .process-micro-copy-holder {
-  height: 36px;
+  height: 30px;
   display: flex;
   align-items: center;
   width: 100%;
@@ -77,18 +84,17 @@ img {
   /* <--- --- | HEADER-BAR COMPONENT STYLING | --- ---> */
 
   .buttons-holder {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 20px;
     background-color: transparent;
   }
   
-  .buttons-holder-h {
+  /* .buttons-holder-h {
     margin-top: 20px;
     width: 100%;
-  }
+  } */
   
   .buttons-holder-inner {
     display: flex;
@@ -448,7 +454,6 @@ img {
     .page-widgets-holder {
       display: flex;
       justify-content: space-between;
-      padding: 15px 25px;
     }
 
 
@@ -470,7 +475,7 @@ img {
     
     .page-left-side-contacts-wrapper {
       width: 775px;
-      height: 525px;
+      height: 510px;
       display: flex;
       flex-direction: row;
       align-items: flex-start;
@@ -580,6 +585,12 @@ img {
     }
     .final-check-product-table-amount-field-flex {
       display: flex;
+    }
+
+    .final-check-table-products-holder {
+      height: 230px;
+      visibility: visible;
+      overflow-x: scroll;
     }
     
         /* <--- --- | PAGE LEFT SIDE POP-UP MESSAGE COMPONENT STYLING | --- ---> */ 
