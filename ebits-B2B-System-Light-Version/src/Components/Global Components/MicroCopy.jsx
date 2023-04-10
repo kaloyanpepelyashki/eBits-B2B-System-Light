@@ -2,7 +2,7 @@ export default function ProcessMicroCopy(props) {
   const { processStep } = props;
   return (
     <>
-      <div className="process-micro-copy-holder ml-10 space-x-6">
+      <div className="process-micro-copy-holder ml-10 space-x-6 my-5">
         <p className="process-micro-copy-text ml-2 text-txt-black-color text-TextXS text-left font-bold">
           Choose Products
         </p>

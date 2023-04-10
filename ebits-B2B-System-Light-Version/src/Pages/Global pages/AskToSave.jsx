@@ -44,13 +44,16 @@ export default function AskToSave() {
   return (
     // <=== TYPE OF ORDER PAGE / ASK TO EXPORT PAGE CONTENT STARTS HERE ===>
     <>
-      <main className="TypeOfOrder-page-content-wrapper page-main-section">
+      <main className="TypeOfOrder-page-content-wrapper page-main-section
+      px-6 mt-14 2xl:px-20">
         <div className="TypeOfOrder-inner-content">
-          <h1 className="TypeOfOrder-page-header text-TextXL text-txt-grey-color font-normal mt-20 mb-10">
+          <div className=" landing-page-welcome-header text-TextBig
+           md:pt-10 xl:mt-24">
             Would you like to save the
-            <b className="text-primary-color"> current invoice </b>as a custom
+            <b className="text-primary-color"> current invoice <br/></b> a custom
             product link?
-          </h1>
+            <div/>
+          </div>
           <div className="TypeOfOrder-page-route-choice-holder mx-8 mt-16">
             <div className="TypeOfOrder-page-choice-item font-semibold space-x-4">
               <input
@@ -63,7 +66,7 @@ export default function AskToSave() {
                   setTypeOfQuerry(e.target.value);
                 }}
               />
-              <p className="TypeOfOrder-page-choice-text font-semibold text-TextLarge">
+              <p className="text-primary-color mt-5 TypeOfOrder-page-choice-text font-semibold text-TextBig">
                 Yes
               </p>
             </div>
@@ -78,7 +81,7 @@ export default function AskToSave() {
                   setTypeOfQuerry(e.target.value);
                 }}
               />
-              <p className="TypeOfOrder-page-choice-text font-bold text-TextLarge">
+              <p className="text-primary-color mt-5 TypeOfOrder-page-choice-text font-bold text-TextBig">
                 No
               </p>
             </div>

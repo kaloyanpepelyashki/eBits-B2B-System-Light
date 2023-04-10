@@ -51,7 +51,7 @@ export default function LandingPage({ productsList }) {
     <>
       <main
         className="landing-page-content-wrapper page-main-section 
-        px-6 2xl:px-20"
+         px-6 mt-8 mb-8 2xl:px-20"
       >
         <div
           className="landing-page-inner-content
@@ -59,29 +59,29 @@ export default function LandingPage({ productsList }) {
         >
           <h1
             className="landing-page-welcome-header text-TextBig
-            md:mt-20 md:mb-10 xl:mt-24"
+             md:pt-10 xl:mt-24"
           >
             Before starting your shop journey, do
             <br /> you want us to send you
             <b className="text-primary-color"> our catalog</b>?
           </h1>
-          {emailValidation ? (
-            " "
-          ) : (
-            <p
-              className="email-validation text-sm
-            mb-4 sm:py-2 md:mb-6 lg:mb-8 2xl:w-1/2 2xl:mx-auto"
-            >
-              Please enter a valid email
-            </p>
-          )}
+          <div className="mt-4">
           <input
             className="email-input-field block px-3 py-2 bg-white border-white border-slate-300 rounded-sm text-sm shadow-xl focus:outline-none 
-            mb-4 md:mb-0 md:mr-4 max-w-lg 2xl:max-w-xl"
+            md:mr-4 max-w-lg 2xl:max-w-xl"
             type="text"
             placeholder="Your Email..."
             onChange={(e) => setEmailAddress(e.target.value)}
           />
+          {!emailValidation && (
+            <p
+              className="email-validation text-sm ml-14
+              mt-2 mb-0 md:mb-6 lg:mb-10 2xl:w-1/2"
+            >
+              Please enter a valid email
+            </p>
+          )}
+        </div>
           <button
             onClick={sendMail}
             className="form-btn bg-primary-color mt-8 py-1 px-6 rounded-sm"

@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -83,6 +82,12 @@ img {
  
 }
 
+@media (max-width: 767px) {
+.process-micro-copy-holder {
+display: none;
+}
+}
+
 
   /* <--- --- | HEADER-BAR COMPONENT STYLING | --- ---> */
 
@@ -121,53 +126,142 @@ img {
 
     /* <--- --- | PAGE LEFT SIDE SEARCH COMPONENT STYLING | --- ---> */
 
-  .page-left-side-wrapper{
-    width: 775px;
-    height: 510px;
-    margin: 20px 10px 3px 50px;
-  }
-
-  .page-left-side-main-section {
-    height: 170px;
-  }
-
-  .page-left-side-search-bar {
-    margin: 10px 0px;
-  }
-
-  .icon{
-    margin-left: 530px;
-  }
-
-  .line {
-    width: 650px;
-    height: 2px;
-    background-color: grey;
-  }
-  .search-result-container-scroll {
-    width: 600px;
-    height: 150px;
-    overflow: auto;
-  }
-
-  .search-result-container-scroll::-webkit-scrollbar {
-    width: 5px;
-    background-color: #c4c4c4;
-    border-radius: 5px;
-  }
-  .search-result-container-scroll::-webkit-scrollbar-thumb {
-    background-color: #551C50;
-    border-radius: 5px;
-  }
-
-  .line-2{
-    margin-top: 50px;
-    margin-bottom: 20px;
-  }
-
-  .page-left-side-bottom-section {
-    height: 190px;
-  }
+    .page-left-side-wrapper{
+      width: 95%;
+      max-width: 775px;
+      height: 80%;
+      margin: 20px 10px 3px 50px;
+    }
+  
+    .page-left-side-main-section {
+      height: 170px;
+    }
+  
+    .page-left-side-search-bar {
+      margin: 20px 0px;
+    }
+  
+    .icon{
+      margin-left: auto;
+      margin-right: 20px;
+    }
+  
+    .line {
+      width: 100%;
+      height: 2px;
+      background-color: grey;
+    }
+  
+    .search-result-container-scroll {
+      width: 100%;
+      max-width: 600px;
+      height: 150px;
+      overflow: auto;
+    }
+  
+    .search-result-container-scroll::-webkit-scrollbar {
+      width: 5px;
+      background-color: #c4c4c4;
+      border-radius: 5px;
+    }
+  
+    .search-result-container-scroll::-webkit-scrollbar-thumb {
+      background-color: #551C50;
+      border-radius: 5px;
+    }
+  
+    .line-2{
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+  
+    .page-left-side-bottom-section {
+      height: 100px;
+    }
+  
+    @media only screen and (max-width: 1024px) {
+      .page-left-side-wrapper{
+        max-width: 650px;
+      }
+  
+      .page-left-side-main-section {
+        height: 150px;
+      }
+  
+      .search-result-container-scroll {
+        max-width: 450px;
+        height: 120px;
+      }
+    }
+  
+    @media only screen and (max-width: 768px) {
+      .page-left-side-wrapper{
+        max-width: 500px;
+        margin: 20px 5px 3px 10px;
+        padding: 10px;
+      }
+  
+      .page-left-side-main-section {
+        height: 120px;
+      }
+  
+      .page-left-side-search-bar {
+        margin: 5px 0px;
+      }
+  
+      .icon{
+        margin-left: auto;
+        margin-right: 10px;
+      }
+  
+      .line {
+        height: 1px;
+      }
+  
+      .search-result-container-scroll {
+        max-width: 350px;
+        height: 100px;
+      }
+  
+      .page-left-side-bottom-section {
+        height: 150px;
+      }
+    }
+  
+    @media only screen and (max-width: 480px) {
+      .page-left-side-wrapper{
+        max-width: 200px;
+        margin: 20px 5px 3px 10px;
+        padding: 5px;
+      }
+  
+      .page-left-side-main-section {
+        height: 100px;
+      }
+  
+      .page-left-side-search-bar {
+        margin: 3px 0px;
+      }
+  
+      .icon{
+        margin-left: auto;
+        margin-right: 5px;
+      }
+  
+      .line {
+        height: 0.5px;
+      }
+  
+      .search-result-container-scroll {
+        max-width: 250px;
+        height: 80px;
+      }
+  
+      .page-left-side-bottom-section {
+        height: 100px;
+      }
+    }
+  
 
 
         /* <--- --- | PAGE LEFT SIDE KIT TOP SECTION COMPONENT STYLING | --- ---> */
@@ -755,4 +849,5 @@ img {
 
 
     
+
 
