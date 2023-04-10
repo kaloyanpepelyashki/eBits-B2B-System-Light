@@ -26,6 +26,8 @@ export default function FinalCheckPage(props) {
 
   const { cartProducts, typeOfQuerry } = useContext(ShoppingCartFunc);
 
+  const nextRoute = typeOfQuerry === 2 ? "/name-it" : "/thankYou";
+
   // const sendQuery = () => {
   //   axios
   //     //Makes a post request to the mailer server
@@ -46,7 +48,7 @@ export default function FinalCheckPage(props) {
   //     });
   // };
   const handleTransfer = () => {
-    navigate("/thankYou");
+    navigate(nextRoute);
   };
 
   return (
@@ -81,6 +83,5 @@ export default function FinalCheckPage(props) {
         </div>
       </main>
     </>
-    //*! Important
   );
 }

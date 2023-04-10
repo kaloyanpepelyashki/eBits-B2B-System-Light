@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
-import ProductAmountHandler from "./AtomicComponents/ProductAmountHandler";
-
 //Importing Font Awesome and Font Awesome components
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleInfo, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+
+//Importing Components
+import ProductAmountHandler from "./AtomicComponents/ProductAmountHandler";
 
 export default function BasketProductsDisplay(props) {
   const {

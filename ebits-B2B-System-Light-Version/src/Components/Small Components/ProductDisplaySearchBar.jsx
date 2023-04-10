@@ -122,8 +122,8 @@ export default React.memo(function ProductSearchBar({ product, addProduct }) {
               {product.ProductName}
             </h2>
           </div>
-          //TODO MAKE THE DESCRIPTION MESSAGE //TODO MAKE THE DESCRIPTION
-          MESSAGE POP-UP ON HOVER ON THE INFORMATION ICON
+          {/* //TODO MAKE THE DESCRIPTION MESSAGE //TODO MAKE THE DESCRIPTION
+          MESSAGE POP-UP ON HOVER ON THE INFORMATION ICON */}
         </div>
       </div>
     </>

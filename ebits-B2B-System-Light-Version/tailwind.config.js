@@ -19,6 +19,7 @@ export default {
       TextLarge: "28pt",
       TextBig: "25pt",
       TextMid: "20pt",
+      TextMidSmall: "17pt",
       TextSmall: "14pt",
       TextXS: "11pt",
       GlobalBtnsTxt: "15pt",

@@ -21,9 +21,10 @@ import OutroPage from "./Pages/Global pages/OutroPage";
 import ProductSelectionPage from "./Pages/Global pages/ProductSelectionPage";
 import AskToSave from "./Pages/Global pages/AskToSave";
 import ContactInfoPage from "./Pages/Global pages/ContactsPage";
+import NameKit from "./Pages/Global pages/NameYourKit";
 
 function App() {
-  //Fetching data from the server
+  //*Fetching data from the server
   //////
   ////
   //
@@ -62,12 +63,14 @@ function App() {
                 element={<ProductSelectionPage productsList={productsList} />}
               />
               <Route path="/BuyorExport" element={<AskToSave />} />
-              <Route path="/thankYou" element={<OutroPage />} />
+
               <Route path="/contactInfo-Page" element={<ContactInfoPage />} />
               <Route
                 path="/finalChackPage"
                 element={<FinalCheckPage productList={productsList} />}
               />
+              <Route path="/name-it" element={<NameKit />} />
+              <Route path="/thankYou" element={<OutroPage />} />
             </Routes>
           </ShoppingCartProvider>
         </ContactInfoContProvider>

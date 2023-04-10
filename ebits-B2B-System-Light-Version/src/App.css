@@ -33,6 +33,10 @@ img {
   height: auto;
 }
 
+input[type="text"] {
+  border: none;
+}
+
   /**********************************************************************/
 
   /****                                                              ****/
@@ -124,10 +128,10 @@ display: none;
   }
 
 
-    /* <--- --- | PAGE LEFT SIDE SEARCH COMPONENT STYLING | --- ---> */
+    /** <--- --- | PAGE LEFT SIDE SEARCH COMPONENT STYLING | --- ---> */
 
-    .page-left-side-wrapper{
-      width: 95%;
+    .page-left-side-wrapper {
+      width: 770px;
       max-width: 775px;
       height: 80%;
       margin: 20px 10px 3px 50px;
@@ -264,7 +268,7 @@ display: none;
   
 
 
-        /* <--- --- | PAGE LEFT SIDE KIT TOP SECTION COMPONENT STYLING | --- ---> */
+        /** <--- --- | PAGE LEFT SIDE KIT TOP SECTION COMPONENT STYLING | --- ---> */
     .page-left-side-top-section {
       width: 80%;
       height: 70px;
@@ -297,7 +301,7 @@ display: none;
       margin: 0 5px;
       height: 100%;
     }
-        /* <--- --- | SEARCH BAR PRODUCT DISPLAY COMPONENT STYLING | --- ---> */
+        /** <--- --- | SEARCH BAR PRODUCT DISPLAY COMPONENT STYLING | --- ---> */
 
       .product-search-bar {
           display: flex;
@@ -633,7 +637,7 @@ display: none;
           /***  <==== === ! | FINAL CHECK PAGE | ! === ====>  ***/
 
      
-           /* <--- --- | PAGE LEFT SIDE - FINAL CHECK COMPONENT STYLING | --- ---> */       
+           /** <--- --- | PAGE LEFT SIDE - FINAL CHECK COMPONENT STYLING | --- ---> */       
     
     .page-left-side-contacts-top-section {
       width: 100%;
@@ -691,7 +695,7 @@ display: none;
       overflow-x: scroll;
     }
     
-        /* <--- --- | PAGE LEFT SIDE POP-UP MESSAGE COMPONENT STYLING | --- ---> */ 
+        /** <--- --- | PAGE LEFT SIDE POP-UP MESSAGE COMPONENT STYLING | --- ---> */ 
         
     .final-check-page-pop-up-wrapper {
       width: 600px;
@@ -711,7 +715,7 @@ display: none;
       
     }
     
-           /* <--- --- | FINAL CHECK ITEM DISPLAY COMPONENT STYLING | --- ---> */      
+           /** <--- --- | FINAL CHECK ITEM DISPLAY COMPONENT STYLING | --- ---> */      
     .final-check-product-table-amount-btn {
       width: 45px;
       height: 25px;
@@ -732,8 +736,77 @@ display: none;
 
 
 
+          /***  <==== === ! | NAME YOUR KIT PAGE | ! === ====>  ***/
+
+      .page-left-side-name-kit{ 
+        width: 775px;
+        height: 510px;
+        padding-left: 70px;
+      }
+      .name-it-page-empty-space {
+        height: 20px;
+        width: 200px;
+      }
+      
+      
+       /** <--- --- | NAME YPUR KIT PAGE LEFT SIDE COMPONENT STYLING | --- ---> */     
+      .page-left-side-name-kit-main-content {
+        display: flex;
+        flex-direction: column;
+      }
+      .page-left-side-name-kit-top-section {
+        width: 60%;
+        height: 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+      .page-left-side-name-kit-bottom-section {
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .line-name-it {
+        width: 540px;
+      }
+      .name-it-choice-holder {
+        display: flex;
+        align-items: center;
+      }
+      .name-it-page-ok-btn {
+        height: 35px;
+        width: 120px;
+        align-self: center;
+        margin-top: 15px;
+        color: rgb(228, 228, 228);
+      }
+
+
+            /** <--- --- | NAME YOUR KIT STATIC RECEIPT COMPONENT STYLING | --- ---> */   
+
+      .name-it-receipt-wrapper {
+        background-color: transparent;
+      }
+      .name-it-receipt-icon {
+        font-size: 74pt;
+      }
+      .name-it-receipt-static-products-display-section {
+        margin-top: 55px;
+      }
+      .line-thick {
+        height: 4px;
+        width: 310px;
+        margin-top: 50px;
+      }
+      .name-it-receipt-static-price-holder {
+        margin-top: 20px;
+      }
+
+
 
       /***  <==== === ! | OUTRO PAGE | ! === ====>  ***/
+
     .outro-page-content-wrapper {
       height: 100%;
       width: 100%;
@@ -752,6 +825,8 @@ display: none;
 
 
      /***  <==== === ! | DELETE LATER | ! === ====>  ***/
+
+
     .receipt-holder {
       display: flex;
       flex-direction: column;
