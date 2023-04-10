@@ -53,7 +53,7 @@ export default function PageLeftSideFinalCheckPage(props) {
         />
       </PopUpMessage>
       <div
-        className="page-left-side-wrapper px-6 py-6 bg-white border-white border-slate-300 rounded-sm text-sm shadow-2xl
+        className="page-left-side-wrapper px-10 py-6 bg-white border-white border-slate-300 rounded-sm text-sm shadow-2xl
             "
       >
         <div className="page-left-side-contacts-main-content">
@@ -62,18 +62,18 @@ export default function PageLeftSideFinalCheckPage(props) {
               Last check if this is everything...
             </p>
 
-            <div className="page-left-side-contacts-add-more-holder text-primary-color">
-              <FontAwesomeIcon
-                icon={faPlus}
-                className="text-TextMid"
-                onClick={() => {
-                  setToggleUp(true);
+            <div className="page-left-side-contacts-add-more-holder text-primary-color invisible md:visible">
+            <FontAwesomeIcon
+               icon={faPlus}
+               className="text-TextMid cursor-pointer md:mr-2"
+               onClick={() => {
+               setToggleUp(true);
                 }}
-              />
-              <p className="text-primary-color text-ProductTitleSmall font-bold">
-                Add more
-              </p>
-            </div>
+            />
+           <p className="text-primary-color text-ProductTitleSmall font-bold">
+            Add more
+            </p>
+           </div>
           </div>
           {props.children}
           <div className="products-holder-section">
