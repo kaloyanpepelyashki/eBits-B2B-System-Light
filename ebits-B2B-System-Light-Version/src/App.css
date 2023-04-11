@@ -89,7 +89,7 @@ display: none;
 }
 
 
-  /* <--- --- | HEADER-BAR COMPONENT STYLING | --- ---> */
+  /** <--- --- | HEADER-BAR COMPONENT STYLING | --- ---> */
 
   .buttons-holder {
     position: fixed;
@@ -124,11 +124,11 @@ display: none;
   }
 
 
-    /* <--- --- | PAGE LEFT SIDE SEARCH COMPONENT STYLING | --- ---> */
+    /** <--- --- | PAGE LEFT SIDE SEARCH COMPONENT STYLING | --- ---> */
 
     .page-left-side-wrapper{
-      width: 95%;
-      max-width: 775px;
+      width: 800px;
+      max-width: 800px;
       height: 80%;
       margin: 20px 10px 3px 50px;
     }
@@ -154,7 +154,7 @@ display: none;
   
     .search-result-container-scroll {
       width: 100%;
-      max-width: 600px;
+      max-width: 700px;
       height: 150px;
       overflow: auto;
     }
@@ -264,7 +264,13 @@ display: none;
   
 
 
-    /* <--- --- | PAGE LEFT SIDE KIT TOP SECTION COMPONENT STYLING | --- ---> */
+        /** <--- --- | PAGE LEFT SIDE BASKET ITEM DISPLAY COMPONENT STYLING | --- ---> */
+    
+    
+      
+
+
+    /** <--- --- | PAGE LEFT SIDE KIT TOP SECTION COMPONENT STYLING | --- ---> */
     .page-left-side-top-section {
       width: 80%;
       height: 70px;
@@ -312,7 +318,8 @@ display: none;
         }
 
         .product-search-bar-main-container {
-          width: 80%;
+          position: relative;
+          width: 770px;
           display: flex; 
           flex-direction: row;
         }
@@ -328,7 +335,7 @@ display: none;
         
         .product-search-bar-outter-wrapper {
           height: 42px;
-          width: 570px;
+          width: 650px;
           display: flex;
           flex-direction: row;
           justify-content: flex-start;
@@ -355,6 +362,7 @@ display: none;
       }  
       .product-searchbar-clickable-space {
         display: flex;
+        width: 350px;
 
       }
       
@@ -568,7 +576,7 @@ display: none;
     }
 
 
-          /* <--- --- | PAGE LEFT SIDE CONTACTS COMPONENT STYLING | --- ---> */
+          /** <--- --- | PAGE LEFT SIDE CONTACTS COMPONENT STYLING | --- ---> */
     
           .page-left-side-contacts-wrapper {
             width: 775px;
@@ -656,7 +664,9 @@ display: none;
           }
     
      /***  <==== === ! | FINAL CHECK PAGE | ! === ====>  ***/
-      /* <--- --- | PAGE LEFT SIDE - FINAL CHECK COMPONENT STYLING | --- ---> */       
+
+
+      /** <--- --- | PAGE LEFT SIDE - FINAL CHECK COMPONENT STYLING | --- ---> */       
     
       .page-left-side-contacts-top-section {
         width: 100%;
@@ -844,7 +854,7 @@ display: none;
 
 
      
-     /* <--- --- | PAGE LEFT SIDE POP-UP MESSAGE COMPONENT STYLING | --- ---> */ 
+     /** <--- --- | PAGE LEFT SIDE POP-UP MESSAGE COMPONENT STYLING | --- ---> */ 
         
     .final-check-page-pop-up-wrapper {
       width: 600px;
@@ -864,7 +874,7 @@ display: none;
       
     }
     
-           /* <--- --- | FINAL CHECK ITEM DISPLAY COMPONENT STYLING | --- ---> */      
+           /** <--- --- | FINAL CHECK ITEM DISPLAY COMPONENT STYLING | --- ---> */      
     .final-check-product-table-amount-btn {
       width: 45px;
       height: 25px;
@@ -922,6 +932,7 @@ display: none;
     }
 
     .basket-scroll-section{
+      position: relative;
       width: 100%;
       height: 50%;
       display: flex;
@@ -975,10 +986,13 @@ display: none;
     }
 
     .item-display-basket {
+ 
       width: 90%;
       height: 75px;
       border-top: 1px solid rgba(223, 223, 223, 0.091);
-      margin-bottom: 12px;
+      margin-bottom: 12px;     
+      display: flex;
+      align-items: center;
     }
 
     .type-of-order-box-icon {
@@ -1014,6 +1028,35 @@ display: none;
       }
     }
     
+
+
+  .product-search-bar-description-pop-up {
+    height: 63px;
+    width: 23%;
+    position: relative;
+    z-index: 1000;
+    overflow-y: scroll;  
+    padding: 15px;
+    margin-top: 7px;
+    margin-left: 23px;
+    border-radius: 0% 30% 10% 20%;
+    background: rgba(226, 226, 226, 0.318);
+  }
+  .product-search-bar-info-icon {
+    position: static;
+    margin-right: 5px;
+    font-size: 12pt;
+  }
+
+  .product-search-bar-description-pop-up::-webkit-scrollbar {
+    width: 0px;
+    background-color: #c4c4c4;
+    border-radius: 5px;
+  }
+  .product-search-bar-description-pop-up::-webkit-scrollbar-thumb {
+    background-color: #551c5076;
+    border-radius: 5px;
+  }
 
 
 

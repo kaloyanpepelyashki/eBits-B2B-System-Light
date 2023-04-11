@@ -1,9 +1,21 @@
 //Importing React hooks
 import React, { useState, useEffect } from "react";
 
+//Importing Font Awesome and Font Awesome components
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCircle,
+  faCircleQuestion,
+  faRectangleList,
+} from "@fortawesome/free-regular-svg-icons";
+import { faCircleQuestion as farFaCircleQuestion } from "@fortawesome/free-regular-svg-icons";
+
 export default React.memo(function ProductSearchBar({ product, addProduct }) {
   const [productWithVar, setProductWithVar] = useState({});
   const [variationAndPrice, setVariationAndPrice] = useState([]);
+
+  const [revealDescription, setRevealDescription] = useState(false);
 
   //Fetching the variations from the server
   //////
@@ -50,6 +62,7 @@ export default React.memo(function ProductSearchBar({ product, addProduct }) {
       Price: e.target.options[e.target.selectedIndex].getAttribute(
         "data-variationprice"
       ),
+      Description: product.Description,
     };
     //Sets the state of teh ProductWithVar variable
     setProductWithVar((productWithVar) => ({
@@ -75,7 +88,7 @@ export default React.memo(function ProductSearchBar({ product, addProduct }) {
   };
   return (
     <>
-      <div className="product-search-bar-outter-wrapper">
+      <div className="product-search-bar-outter-wrapper relative">
         <div className="product-search-bar-main-container">
           <select
             onChange={(e) => {
@@ -122,8 +135,27 @@ export default React.memo(function ProductSearchBar({ product, addProduct }) {
               {product.ProductName}
             </h2>
           </div>
-          {/* //TODO MAKE THE DESCRIPTION MESSAGE //TODO MAKE THE DESCRIPTION
-          MESSAGE POP-UP ON HOVER ON THE INFORMATION ICON */}
+          <div className="flex row">
+            <FontAwesomeIcon
+              className="product-search-bar-info-icon "
+              onMouseEnter={() => setRevealDescription(true)}
+              onMouseLeave={() =>
+                setTimeout(() => setRevealDescription(false), 2500)
+              }
+              icon={faCircleQuestion}
+            />
+            {revealDescription ? (
+              <div
+                className="product-search-bar-description-pop-up absolute"
+                onMouseEnter={() => setRevealDescription(true)}
+                onMouseLeave={() => setRevealDescription(false)}
+              >
+                <p className="text-TextXXS">{product.Description}</p>
+              </div>
+            ) : (
+              ""
+            )}
+          </div>
         </div>
       </div>
     </>

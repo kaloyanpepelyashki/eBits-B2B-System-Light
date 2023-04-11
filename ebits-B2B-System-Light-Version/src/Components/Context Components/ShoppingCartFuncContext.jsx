@@ -55,6 +55,7 @@ export const ShoppingCartProvider = (props) => {
             VariationName: product.VariationName,
             VariationID: product.VariationID,
             productBaksetUnqKey: `${product.ProductIndex} / ${product.VariationID}`,
+            Description: product.Description,
           },
         ]);
       }
