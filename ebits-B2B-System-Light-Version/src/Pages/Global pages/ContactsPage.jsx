@@ -55,7 +55,7 @@ export default function ContactInfoPage() {
     <>
       <main className="contact-info-page-main-content-wrapper page-main-section">
         <div className="contact-info-page-inner-content">
-          <div className="contact-info-page-widgets-holder">
+          <div className="contact-info-page-widgets-holder -mx-10">
             <div>
               <ProcessMicroCopy processStep={2} />
               {typeOfQuerry == 1 ? (

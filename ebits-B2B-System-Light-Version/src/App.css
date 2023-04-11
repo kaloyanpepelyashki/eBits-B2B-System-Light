@@ -33,10 +33,6 @@ img {
   height: auto;
 }
 
-input[type="text"] {
-  border: none;
-}
-
   /**********************************************************************/
 
   /****                                                              ****/
@@ -128,10 +124,10 @@ display: none;
   }
 
 
-    /** <--- --- | PAGE LEFT SIDE SEARCH COMPONENT STYLING | --- ---> */
+    /* <--- --- | PAGE LEFT SIDE SEARCH COMPONENT STYLING | --- ---> */
 
-    .page-left-side-wrapper {
-      width: 770px;
+    .page-left-side-wrapper{
+      width: 95%;
       max-width: 775px;
       height: 80%;
       margin: 20px 10px 3px 50px;
@@ -268,7 +264,7 @@ display: none;
   
 
 
-        /** <--- --- | PAGE LEFT SIDE KIT TOP SECTION COMPONENT STYLING | --- ---> */
+    /* <--- --- | PAGE LEFT SIDE KIT TOP SECTION COMPONENT STYLING | --- ---> */
     .page-left-side-top-section {
       width: 80%;
       height: 70px;
@@ -301,7 +297,7 @@ display: none;
       margin: 0 5px;
       height: 100%;
     }
-        /** <--- --- | SEARCH BAR PRODUCT DISPLAY COMPONENT STYLING | --- ---> */
+        /* <--- --- | SEARCH BAR PRODUCT DISPLAY COMPONENT STYLING | --- ---> */
 
       .product-search-bar {
           display: flex;
@@ -500,7 +496,6 @@ display: none;
 
   
   /***  <==== === ! | TYPE OF ORDER PAGE | ! === ====>  ***/
-
   .TypeOfOrder-page-content-wrapper {
     height: 100%;
     width: 100%;
@@ -575,164 +570,206 @@ display: none;
 
           /* <--- --- | PAGE LEFT SIDE CONTACTS COMPONENT STYLING | --- ---> */
     
-    .page-left-side-contacts-wrapper {
-      width: 775px;
-      height: 510px;
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: space-between;
-      padding: 40px 70px;
-      margin: 20px 10px 3px 50px;
-    }
-    .contacts-page-heading {
-      margin-bottom: 10px
-    }
-    .page-left-side-contacts-column {
-      width: 327px;
-    }
-    .page-left-side-contacts-left-column {
-      height: 70%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: space-between;
-    }
-
-    .personal-contact-info-block {
-      width: 100%;
-      display: flex;  
-      flex-direction: column;
-      align-items: flex-start;
-      margin-bottom: 55px;
-    }
-    .address-contact-info-block {
-      width: 100%;
-      
-    }
-
-    .contacts-page-small-inputs-holder {
-      width: 275px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin-top: 5px;
-    }
-    .contacts-page-input-field {
-      width: 275px;
-      height: 32px;
-      margin-top: 5px;
-      margin-bottom: 15px;
-    }
-    .contacts-page-input-field-small {
-      width: 130px;
-    }
-    .address-contact-info-block {
-      display: flex;
-      flex-direction: column;
-    }
-      
-  
-
-          /***  <==== === ! | FINAL CHECK PAGE | ! === ====>  ***/
-
-     
-           /** <--- --- | PAGE LEFT SIDE - FINAL CHECK COMPONENT STYLING | --- ---> */       
+          .page-left-side-contacts-wrapper {
+            width: 775px;
+            height: 510px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 40px 70px;
+            margin: 20px 10px 3px 50px;
+          }
+          
+          .contacts-page-heading {
+            margin-bottom: 10px
+          }
+          
+          .page-left-side-contacts-column {
+            width: 327px;
+          }
+          
+          .page-left-side-contacts-left-column {
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+          }
+          
+          .personal-contact-info-block {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 55px;
+          }
+          
+          .address-contact-info-block {
+            width: 100%;
+          }
+          
+          .contacts-page-small-inputs-holder {
+            width: 275px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 5px;
+          }
+          
+          .contacts-page-input-field {
+            width: 275px;
+            height: 32px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+          }
+          
+          .contacts-page-input-field-small {
+            width: 130px;
+          }
+          
+          .address-contact-info-block {
+            display: flex;
+            flex-direction: column;
+          }
+          
+          /* Media Query */
+          @media (max-width: 767px) {
+            .final-check-product-table-name-field {
+              font-size: 15px;
+            }
+            .final-check-product-table-head .final-check-product-table-amount-field,
+            .final-check-product-table-head .final-check-product-table-delete-field {
+              display: none;
+            }
+            
+            .final-check-product-table-head .final-check-product-table-name-field,
+            .final-check-product-table-head .final-check-product-table-total-field {
+              width: 50%;
+            }
+            
+            .final-check-product-table-head .final-check-product-table-name-field,
+            .final-check-product-table-head .final-check-product-table-total-field,
+            .final-check-product-table-head .final-check-product-table-delete-field {
+              text-align: center;
+            }
+          }
     
-    .page-left-side-contacts-top-section {
-      width: 100%;
-      height: 58px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-     }
-     .page-left-side-contacts-add-more-holder {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-     }      
-    .final-check-product-table {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 10px 6px;
-    }
-    .final-check-product-table-row .final-check-product-table-head {
-      height: 45px;
-      padding: 7px 2px;
-    }
-    .final-check-product-table-row  {
-      height: 54px;
-      display: flex;
-      align-items: center;
-      padding: 5px;
-      border-bottom: 1.3px solid #B5B5B4;
-    }
-    .final-check-product-table-I-tag-field {
-      width: 56px;
-      
-    }
-    .final-check-product-table-name-field {
-      width: 385px;
-      
-    }
-    .final-check-product-table-total-field {
-      width: 116px;
-      padding-left: 14px;
-     
-    }
-    .final-check-product-table-amount-field {
-      width: 123px;
+     /***  <==== === ! | FINAL CHECK PAGE | ! === ====>  ***/
+      /* <--- --- | PAGE LEFT SIDE - FINAL CHECK COMPONENT STYLING | --- ---> */       
     
-    }
-    .final-check-product-table-amount-field-flex {
-      display: flex;
-    }
-
-    .final-check-table-products-holder {
-      height: 230px;
-      visibility: visible;
-      overflow-x: scroll;
-    }
-    
-        /** <--- --- | PAGE LEFT SIDE POP-UP MESSAGE COMPONENT STYLING | --- ---> */ 
+      .page-left-side-contacts-top-section {
+        width: 100%;
+        height: 58px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+       }
+       .page-left-side-contacts-add-more-holder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       }      
+      .final-check-product-table {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 6px;
+      }
+      .final-check-product-table-row .final-check-product-table-head {
+        height: 45px;
+        padding: 7px 2px;
+      }
+      .final-check-product-table-row  {
+        height: 54px;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        border-bottom: 1.3px solid #B5B5B4;
+      }
+      .final-check-product-table-I-tag-field {
+        width: 56px;
         
-    .final-check-page-pop-up-wrapper {
-      width: 600px;
-      height: 200px;
-      position: absolute;
-      top: 34%;
-      left: 30%;
-      background-color: #ffffff;
-      border: 1px solid black;
-      padding: 30px 50px;
+      }
+      .final-check-product-table-name-field {
+        width: 385px;
+        
+      }
+      .final-check-product-table-total-field {
+        width: 116px;
+        padding-left: 14px;
+       
+      }
+      .final-check-product-table-amount-field {
+        width: 123px;
       
+      }
+      .final-check-product-table-amount-field-flex {
+        display: flex;
+      }
+  
+      .final-check-table-products-holder {
+        height: 230px;
+        visibility: visible;
+        overflow-x: scroll;
+      }
+  
+  
+      /* Media Query */
+  @media (max-width: 767px) {
+  
+    .final-check-product-table-head {
+      display: none;
     }
-    .final-check-pop-up-top-section {
-      width: 100%;
+  
+    .final-check-product-table-row-item {
       display: flex;
-      justify-content: flex-end;
-      
+      flex-direction: column;
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0;
+      margin-top: 0px;
     }
     
-           /** <--- --- | FINAL CHECK ITEM DISPLAY COMPONENT STYLING | --- ---> */      
-    .final-check-product-table-amount-btn {
-      width: 45px;
-      height: 25px;
-      border: 1px solid black;
-      align-content: center;
-      margin-right: 19px;
-      margin-left: 19px;
+    .final-check-product-table-I-tag-field {
+      display: none;
     }
-    .final-check-product-table-price {
-      width: 32px;
-      height: 21.18px;
+    
+    .final-check-product-table-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-start;
+    }
+    
+    .final-check-product-table-name-field {
+      font-size: 16px;
       text-align: center;
-      align-content: center;
+      margin-bottom: 5px;
     }
-    .trash-icon:hover {
-      cursor: pointer;
+    
+    .final-check-product-table-total-field {
+      display: flex;
+      font-size: 20px;
+      margin-left: 30px;
+      margin-bottom: 0px;
+      margin-top: 10px;
     }
+    
+    .final-check-product-table-amount-field {
+      position: absolute;
+      margin-left: 150px;
+      margin-bottom: 5px;
+      margin-top: 65px;
+    }
+    
+    .final-check-product-table-delete-field {
+      position: absolute;
+      margin-left: 300px;
+      margin-bottom: 50px;
+      margin-top: 65px;
+    }
+  }   
 
 
 
@@ -806,28 +843,57 @@ display: none;
 
 
 
-      /***  <==== === ! | OUTRO PAGE | ! === ====>  ***/
-
-    .outro-page-content-wrapper {
-      height: 100%;
+     
+     /* <--- --- | PAGE LEFT SIDE POP-UP MESSAGE COMPONENT STYLING | --- ---> */ 
+        
+    .final-check-page-pop-up-wrapper {
+      width: 600px;
+      height: 200px;
+      position: absolute;
+      top: 34%;
+      left: 30%;
+      background-color: #ffffff;
+      border: 1px solid black;
+      padding: 30px 50px;
+      
+    }
+    .final-check-pop-up-top-section {
       width: 100%;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      justify-content: flex-end;
+      
+    }
+    
+           /* <--- --- | FINAL CHECK ITEM DISPLAY COMPONENT STYLING | --- ---> */      
+    .final-check-product-table-amount-btn {
+      width: 45px;
+      height: 25px;
+      border: 1px solid black;
+      align-content: center;
+      margin-right: 19px;
+      margin-left: 19px;
+    }
+    .final-check-product-table-price {
+      width: 32px;
+      height: 21.18px;
       text-align: center;
+      align-content: center;
     }
-    .outro-page-outro-header {
-      margin-bottom: -10px;
+    .trash-icon:hover {
+      cursor: pointer;
     }
+
+
+
+
+      /***  <==== === ! | OUTRO PAGE | ! === ====>  ***/
+    
     
 
 
 
 
      /***  <==== === ! | DELETE LATER | ! === ====>  ***/
-
-
     .receipt-holder {
       display: flex;
       flex-direction: column;
@@ -915,12 +981,45 @@ display: none;
       margin-bottom: 12px;
     }
 
-    
-
     .type-of-order-box-icon {
       font-size: 25pt;
     }
+
+    .page-left-side-contacts-wrapper {
+      display: flex;
+      flex-wrap: wrap; /* allow items to wrap to next line */
+    }
     
+    .page-left-side-contacts-column {
+      flex: 1; /* occupy equal width */
+    }
+    
+    @media (max-width: 640px) {
+      .page-left-side-contacts-column {
+        flex-basis: 100%;
+        margin-bottom: 200px; 
+        padding-bottom: 100px;
+      }
+    }
+
+    .page-left-side-contacts-scroll-wrapper {
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    
+    @media (pointer: coarse) {
+      .page-left-side-contacts-scroll-wrapper {
+        -webkit-overflow-scrolling: touch;
+        overflow-y: hidden;
+      }
+    }
+    
+
+
+
+    
+
+
 
 
 
