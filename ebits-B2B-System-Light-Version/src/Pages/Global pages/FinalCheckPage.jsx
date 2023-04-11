@@ -2,8 +2,9 @@
 import { useContext } from "react";
 
 //Importing React-router elements and components
-import { useLocation, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
+//Importing Context Components
 import { ShoppingCartFunc } from "../../Components/Context Components/ShoppingCartFuncContext";
 import { ContactsInformationFunc } from "../../Components/Context Components/ContactsInformationContext";
 

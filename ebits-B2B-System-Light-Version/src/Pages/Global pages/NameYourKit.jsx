@@ -1,11 +1,20 @@
+//Importin React hooks
+import { useContext } from "react";
+
+//Importing React-router elements and components
 import { useNavigate } from "react-router-dom";
+
+//Importing Context Components
+import { ShoppingCartFunc } from "../../Components/Context Components/ShoppingCartFuncContext";
+
+//Importing Components
 import ButtonsHolder from "../../Components/Global Components/ButtonsHolderComponent";
 import PageLeftSideNameKit from "../../Components/Small Components/PageLeftSideNameYourKit";
 import ReceiptStaticExportKit from "../../Components/Small Components/ReceiptStaticExportKit";
 
 export default function NameKit() {
   const navigate = useNavigate();
-
+  const { setKitName } = useContext(ShoppingCartFunc);
   const handleTransfer = () => {
     navigate("/thankYou");
   };

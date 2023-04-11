@@ -7,9 +7,10 @@ export const ShoppingCartProvider = (props) => {
   const [cartProducts, setCartProducts] = useState([]);
   const [isKit, setIsKit] = useState(false);
   const [kitAmount, setKitAmount] = useState(1);
-  //TODO Assign the getter and the setter for the typeOfQuery state variable
-  //TODO Figure out the logic behind the typeOfQuerry state variable
   const [typeOfQuerry, setTypeOfQuerry] = useState(0);
+  const [kitName, setKitName] = useState("");
+  const [kitDescription, setKitDescription] = useState("");
+  const [exportRights, setExportRights] = useState("");
 
   let total = 0;
   cartProducts.map((product) => (total = total + product.qty * product.Price));
@@ -60,8 +61,9 @@ export const ShoppingCartProvider = (props) => {
     },
 
     //<== REDUCE AMOUNT FROM CARD CART FUNCTIONALITY FEATURE
-
+    //! Important
     //TODO Examine, if the application still has the reduction bug (removeing all from the same kind despite the variations. Or removing all the ones that have no variation)
+    //! Important
     reduceProductAmount: (product) => {
       const doesExist = cartProducts.find(
         (item) =>
