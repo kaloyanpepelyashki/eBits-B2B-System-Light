@@ -71,6 +71,7 @@ function App() {
               />
               <Route path="/name-it" element={<NameKit />} />
               <Route path="/thankYou" element={<OutroPage />} />
+              <Route path="*" element={<Navigate to="/" />} />
             </Routes>
           </ShoppingCartProvider>
         </ContactInfoContProvider>

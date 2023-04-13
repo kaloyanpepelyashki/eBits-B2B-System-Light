@@ -3,12 +3,7 @@ import React, { useState, useEffect } from "react";
 
 //Importing Font Awesome and Font Awesome components
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import {
-  faCircle,
-  faCircleQuestion,
-  faRectangleList,
-} from "@fortawesome/free-regular-svg-icons";
+import { faCircleQuestion } from "@fortawesome/free-regular-svg-icons";
 import { faCircleQuestion as farFaCircleQuestion } from "@fortawesome/free-regular-svg-icons";
 
 export default React.memo(function ProductSearchBar({ product, addProduct }) {
