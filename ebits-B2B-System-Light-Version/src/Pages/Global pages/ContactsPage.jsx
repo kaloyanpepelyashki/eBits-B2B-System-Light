@@ -6,6 +6,7 @@ import { useLocation, useNavigate } from "react-router";
 
 //Importing Context components
 import { ContactsInformationFunc } from "../../Components/Context Components/ContactsInformationContext";
+import { ShoppingCartFunc } from "../../Components/Context Components/ShoppingCartFuncContext";
 
 //Importing Components
 import ButtonsHolder from "../../Components/Global Components/ButtonsHolderComponent";
@@ -14,7 +15,7 @@ import ProcessMicroCopy from "../../Components/Global Components/MicroCopy";
 import KitReceiptBottomSection from "../../Components/Small Components/KitBuyReceiptBottomSection";
 import PageLeftSideStaticContacts from "../../Components/Small Components/PageLeftSideStaticContacts";
 import PageLeftSideStaticContactsShort from "../../Components/Small Components/PageLeftSideStaticContactShort";
-import { ShoppingCartFunc } from "../../Components/Context Components/ShoppingCartFuncContext";
+
 import ReceiptHandler from "../../Components/Global Components/ReceiptHandler";
 
 export default function ContactInfoPage() {

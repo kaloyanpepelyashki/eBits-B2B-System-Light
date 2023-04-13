@@ -25,10 +25,8 @@ export default function OutroPage() {
             Thank You for your query
           </h1>
           <p className="text-TextLarge text-txt-grey-color">
-            <br /> You will be contacted soon on
-            <b className="text-primary-color">
-              &nbsp; {contactInfoState.email}
-            </b>
+            You will hear from us soon on
+            <b className="text-primary-color">&nbsp;{contactInfoState.email}</b>
           </p>
         </div>
         <ButtonsHolder back={"Yes"} title={"Home"} />

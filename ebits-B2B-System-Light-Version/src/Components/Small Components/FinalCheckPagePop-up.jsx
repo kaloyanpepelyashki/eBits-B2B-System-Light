@@ -26,32 +26,40 @@ export default function PopUpMessage(props) {
 
   return toggleUp ? (
     <>
-      <div className="final-check-page-pop-up-wrapper mb-32 bg-white shadow-xl">
-        <div className="final-check-pop-up-inner-content">
-          <div className="final-check-pop-up-top-section">{props.children}</div>
-          <div className="final-check-pop-up-main-section mb-32">
-            <input
-              className="page-left-side-search-bar block px-4 py-2 pr-24 bg-white border-white border-slate-300 rounded-sm text-sm shadow-md
+      <div className="final-check-page-pop-up-full-width">
+        <div className="final-check-page-pop-up-wrapper mb-32 bg-white shadow-xl">
+          <div className="final-check-pop-up-inner-content">
+            <div className="final-check-pop-up-top-section">
+              {props.children}
+            </div>
+            <div className="final-check-pop-up-main-section mb-32">
+              <div className="page-left-side-search-bar-icon-wrapper ">
+                <input
+                  className="page-left-side-search-bar block px-4 py-2 pr-24 bg-white border-white border-slate-300 rounded-sm text-sm shadow-md
             focus:outline-none"
-              type="text"
-              placeholder="Product name here..."
-              onChange={(e) => setSearchQuerry(e.target.value)}
-            />
-            <FontAwesomeIcon
-              icon={faMagnifyingGlass}
-              className="icon absolute ml-72 -mt-10 py-0"
-            />
-            {Array.isArray(filterFunc) && searchQuerry !== ""
-              ? filterFunc
-                  .slice(0, 3)
-                  .map((product) => (
-                    <ProductDisplaySearchBar
-                      product={product}
-                      addProduct={handleAddProduct}
-                      key={product.ProductIndex}
-                    />
-                  ))
-              : " "}
+                  type="text"
+                  placeholder="Product name here..."
+                  onChange={(e) => setSearchQuerry(e.target.value)}
+                />
+                <FontAwesomeIcon
+                  icon={faMagnifyingGlass}
+                  className="icon absolute ml-72 py-0"
+                />
+              </div>
+              <div className="pop-up-search-result-scroll">
+                {Array.isArray(filterFunc) && searchQuerry !== ""
+                  ? filterFunc
+                      .slice(0, 6)
+                      .map((product) => (
+                        <ProductDisplaySearchBar
+                          product={product}
+                          addProduct={handleAddProduct}
+                          key={product.ProductIndex}
+                        />
+                      ))
+                  : " "}
+              </div>
+            </div>
           </div>
         </div>
       </div>

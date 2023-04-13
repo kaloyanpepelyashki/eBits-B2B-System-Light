@@ -28,15 +28,15 @@ export default function BasketProductsDisplay(props) {
   return (
     <>
       <div className="item-display-basket">
-        <div className="bg-white border-white rounded-sm text-sm shadow-md focus:outline-none">
-          <div className="flex justify-between items-center">
+        <div className="item-display-basket-inner-content bg-white border-white rounded-sm text-sm shadow-md focus:outline-none flex justify-center items-center">
+          <div className="item-display-inner flex justify-between items-center">
             <div className="flex items-center ml-10 mr-10">
               <img
                 className="w-10 h-10 object-contain"
                 src={`http://65.109.137.46:5000/img/${product.ProductIndex}_${product.VariationID}.jpg`}
                 alt={product.ProductName}
               />
-              <h2 className="inline-block font-bold text-ProductTitleSmall">
+              <h2 className="inline-block font-bold text-ProductTitleSmall ml-10">
                 {product.ProductName === product.VariationName ? (
                   product.ProductName
                 ) : (

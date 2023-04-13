@@ -65,17 +65,19 @@ export default function PageLeftSide(props) {
         {props.children}
         <div className="page-left-side-main-section">
           {/* <= //The input field the user types in */}
-          <input
-            className="page-left-side-search-bar block px-8 py-2 pr-80 bg-white border-white  rounded-sm text-sm shadow-md
+          <div className="page-left-side-search-bar-icon-wrapper">
+            <input
+              className="page-left-side-search-bar block px-8 py-2 pr-80 bg-white border-white  rounded-sm text-sm shadow-md
                 focus:outline-none"
-            type="text"
-            placeholder="Product name here..."
-            onChange={(e) => setSearchQuerry(e.target.value)}
-          />
-          <FontAwesomeIcon
-            icon={faMagnifyingGlass}
-            className="icon absolute -mt-10 py-0"
-          />
+              type="text"
+              placeholder="Product name here..."
+              onChange={(e) => setSearchQuerry(e.target.value)}
+            />
+            <FontAwesomeIcon
+              icon={faMagnifyingGlass}
+              className="icon magnifying-glass-icon-page-left-side  py-0"
+            />
+          </div>
           <div className="search-result-container-scroll">
             {Array.isArray(filterFunc) && searchQuerry !== ""
               ? filterFunc
