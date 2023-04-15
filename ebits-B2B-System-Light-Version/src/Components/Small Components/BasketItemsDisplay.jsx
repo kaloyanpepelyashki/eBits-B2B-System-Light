@@ -1,10 +1,10 @@
 //Importing Font Awesome and Font Awesome components
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import { faRectangleList } from "@fortawesome/free-regular-svg-icons";
 
 //Importing Components
 import ProductAmountHandler from "./AtomicComponents/ProductAmountHandler";
+import ProductImageHandler from "./AtomicComponents/ProductImageHandler";
 
 export default function BasketProductsDisplay(props) {
   const {
@@ -12,7 +12,6 @@ export default function BasketProductsDisplay(props) {
     handleIncreaseProductAmount,
     handleReduceProductAmount,
     handleRemoveProduct,
-    setGlobalPrices,
   } = props;
 
   const DisplayNameVar = () => {
@@ -24,19 +23,18 @@ export default function BasketProductsDisplay(props) {
       </>
     );
   };
-  console.log(product.Description);
   return (
     <>
       <div className="item-display-basket">
         <div className="item-display-basket-inner-content bg-white border-white rounded-sm text-sm shadow-md focus:outline-none flex justify-center items-center">
           <div className="item-display-inner flex justify-between items-center">
             <div className="flex items-center ml-10 mr-10">
-              <img
-                className="w-10 h-10 object-contain"
-                src={`http://65.109.137.46:5000/img/${product.ProductIndex}_${product.VariationID}.jpg`}
-                alt={product.ProductName}
+              <ProductImageHandler
+                imageURL={`http://65.109.137.46:5000/img/${product.ProductIndex}_${product.VariationID}.jpg`}
+                fallBackURL={`http://65.109.137.46:5000/img/${product.ProductIndex}_0.jpg`}
+                product={product}
               />
-              <h2 className="inline-block font-bold text-ProductTitleSmall ml-10">
+              <h2 className="inline-block font-bold text-ProductTitleSmall ml-10 cursor-default">
                 {product.ProductName === product.VariationName ? (
                   product.ProductName
                 ) : (
@@ -58,7 +56,7 @@ export default function BasketProductsDisplay(props) {
                   handleRemoveProduct(product);
                 }}
               />
-              <p className="text-right inline-block text-ProductTitleMedium font-extrabold w-32">
+              <p className="text-right inline-block text-ProductTitleMedium font-extrabold w-32 cursor-default">
                 {(Number(product.Price) * Number(product.qty)).toFixed(2)}
                 &nbsp;Dkk
               </p>

@@ -3,9 +3,7 @@ import { useContext } from "react";
 
 import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 import dayjs, { Dayjs } from "dayjs";
-import MomentUtils from "@date-io/moment";
 import { ContactsInformationFunc } from "../Context Components/ContactsInformationContext";
-import { padding } from "@mui/system";
 
 export default function PageLeftSideStaticContacts() {
   const todayDate = new Date();
@@ -151,7 +149,10 @@ export default function PageLeftSideStaticContacts() {
             <DateCalendar
               style={{ height: "320px", width: "300px" }}
               minDate={dayjs(todayDate)}
-              displayWeekNumber={false}
+              displayWeekNumber={true}
+              displayYearNumber={false}
+              disablePast={true}
+              views={["day"]}
               value={value}
               data-value={contactInfoState.deliveryDate}
               onChange={(newValue) => handleCalendar(newValue)}

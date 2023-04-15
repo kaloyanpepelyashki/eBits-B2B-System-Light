@@ -22,8 +22,8 @@ export default function PageLeftTopSection(props) {
         <h1
           className={
             isKit
-              ? "text-TextLarge text-primary-color ml-1"
-              : "text-TextLarge text-txt-grey-color ml-1"
+              ? "text-TextLarge text-primary-color ml-1 cursor-default"
+              : "text-TextLarge text-txt-grey-color ml-1 cursor-default"
           }
         >
           Kit

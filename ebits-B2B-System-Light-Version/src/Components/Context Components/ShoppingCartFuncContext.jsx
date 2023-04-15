@@ -132,6 +132,32 @@ export const ShoppingCartProvider = (props) => {
       );
     },
 
+    handleDirectAmountInput: (product, amount) => {
+      const doesExist = cartProducts.find(
+        (item) =>
+          item.ProductName === product.ProductName &&
+          item.ProductIndex === product.ProductIndex &&
+          item.VariationName?.toLowerCase() ===
+            product.VariationName?.toLowerCase() &&
+          item.VariationID === product.VariationID
+      );
+      setCartProducts(
+        cartProducts.map((item) =>
+          item.ProductName === product.ProductName &&
+          item.ProductIndex === product.ProductIndex &&
+          item.VariationName?.toLowerCase() ===
+            product.VariationName?.toLowerCase() &&
+          item.VariationID === product.VariationID
+            ? {
+                ...doesExist,
+                qty: amount,
+                varQty: amount,
+              }
+            : item
+        )
+      );
+    },
+
     //<== REMOVE FROM CART FUNCTIONALITY FEATURE
 
     removeProduct: (product) => {

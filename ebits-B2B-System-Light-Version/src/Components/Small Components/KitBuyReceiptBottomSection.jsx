@@ -8,7 +8,7 @@ export default function KitReceiptBottomSection() {
   const { kitAmount, total } = useContext(ShoppingCartFunc);
   return (
     <>
-      <div className="flex justify-center">
+      <div className="flex justify-center -mt-100">
         <h1 className="text-total text-TextMid text-primary-color mt-2">
           Total
         </h1>
@@ -24,7 +24,7 @@ export default function KitReceiptBottomSection() {
         </p>
         <p
           className="text-primary-color font-bold text-ProductTitleSmall mx-8
-                   px-4 py-2 bg-white border-white border-slate-300 rounded-xl
+                  px-4 py-2 bg-white border-white border-slate-300 rounded-xl
                   shadow-xl focus:outline-none ml-10 mt-4"
         >
           DKK.

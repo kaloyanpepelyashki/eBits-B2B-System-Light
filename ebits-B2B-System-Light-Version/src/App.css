@@ -50,7 +50,7 @@ img {
 }
 
 
-  /* <--- --- | HEADER-BAR COMPONENT STYLING | --- ---> */
+  /** <--- --- | HEADER-BAR COMPONENT STYLING | --- ---> */
 
 .application-header-bar {
   width: 100%;
@@ -72,7 +72,8 @@ img {
 
 
 
-  /* <--- --- | PROCESS MICRO COPY COMPONENT STYLING | --- ---> */
+  /** <--- --- | PROCESS MICRO COPY COMPONENT STYLING | --- ---> */
+
 .process-micro-copy-holder {
   width: 100%;
   height: 20px;
@@ -100,10 +101,7 @@ display: none;
     margin-bottom: 15px;
   }
   
-  /* .buttons-holder-h {
-    margin-top: 20px;
-    width: 100%;
-  } */
+ 
   
   .buttons-holder-inner {
     display: flex;
@@ -393,6 +391,7 @@ display: none;
     
 
           /** <--- --- |SEPARATE PRODUCTS RECEIPT COMPONENT STYLING | --- ---> */
+
       .separate-product-receipt-wrapper {
         width: 345px;
         height: 530px;
@@ -406,20 +405,20 @@ display: none;
 
       .product-receipt-products-display-section {
         width: 350px;
-        height: 80%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
      
       }
-      .products-receipt-products-holder {
-        width: 340px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 8px; 
-      }
+    
+    .scroll-section{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
 
                /** <--- --- |PRODUCT DISPLAY IN RECEIPT COMPONENT STYLING | --- ---> */    
       .product-display-receipt-wrapper {
@@ -973,14 +972,6 @@ display: none;
     margin-top: 50px;
     }
 
-    .scroll-section{
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      overflow-x: hidden;
-      overflow-y: auto;
-    }
 
     .basket-scroll-section{
       position: relative;
@@ -1092,7 +1083,7 @@ display: none;
     position: relative;
     z-index: 1000;
     overflow-y: scroll;  
-    padding: 15px;
+    padding: 6px 15px;
     margin-top: 7px;
     margin-left: 23px;
     border-radius: 0% 30% 10% 20%;
@@ -1113,6 +1104,19 @@ display: none;
     background-color: #551c5076;
     border-radius: 5px;
   }
+
+
+  .direct-amount-input-amounnt-handler{
+    height: 25px;
+    font-size: 4pt;
+  }
+   .direct-amount-input-amounnt-handler::-webkit-outer-spin-button,
+ .direct-amount-input-amounnt-handler::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
 
 
 

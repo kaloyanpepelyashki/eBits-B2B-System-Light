@@ -24,6 +24,7 @@ export default function PageLeftSide(props) {
       reduceProductAmount,
       increaseProductAmount,
       removeProduct,
+      handleDirectAmountInput,
     },
   } = useContext(ShoppingCartFunc);
 
@@ -41,6 +42,9 @@ export default function PageLeftSide(props) {
   };
   const handleIncreaseProductAmount = (product) => {
     increaseProductAmount(product);
+  };
+  const handleUserDirectInput = (product, amount) => {
+    handleDirectAmountInput(product, amount);
   };
 
   //Setting the search filtering function
@@ -94,7 +98,7 @@ export default function PageLeftSide(props) {
         </div>
         <div className="line line-2"></div>
         <div className="page-left-side-basket-section">
-          <h2 className="text-cardText font-bold text-primary-color">
+          <h2 className="text-cardText font-bold text-primary-color mb-4">
             Your products :
           </h2>
 
@@ -108,6 +112,7 @@ export default function PageLeftSide(props) {
                     handleIncreaseProductAmount={handleIncreaseProductAmount}
                     handleReduceProductAmount={handleReduceProductAmount}
                     handleRemoveProduct={handleRemoveProduct}
+                    handleUserDirectInput={handleUserDirectInput}
                   />
                 ) : (
                   ""
