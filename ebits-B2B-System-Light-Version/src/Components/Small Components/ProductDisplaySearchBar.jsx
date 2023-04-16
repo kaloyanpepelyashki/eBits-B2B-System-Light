@@ -70,6 +70,7 @@ export default React.memo(function ProductSearchBar({ product, addProduct }) {
     //Checks if there is a variation
     //Checks if there is a VariationName in the productWith var object
     //And checks if there are any variations in the list of variations
+
     if (
       !productWithVar.VariationName &&
       (!productWithVar.Price || productWithVar.Price === 0) &&
@@ -77,6 +78,9 @@ export default React.memo(function ProductSearchBar({ product, addProduct }) {
     ) {
       //If there is no selected variation and there are variations in the list, it pushes a window alert
       window.alert("Please selct a variation");
+    }
+    if (productWithVar.VariationName == "select a variation") {
+      window.alert("Please select a valid choice");
     } else {
       addProduct(productWithVar);
     }

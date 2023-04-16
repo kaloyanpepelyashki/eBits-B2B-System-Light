@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { ShoppingCartFunc } from "../Context Components/ShoppingCartFuncContext";
 
 export default function PageLeftTopSection(props) {
-  const { setKitAmount, isKit, setIsKit } = useContext(ShoppingCartFunc);
+  const { isKit, setIsKit } = useContext(ShoppingCartFunc);
 
   const handleCheck = (e) => {
     setIsKit(e.target.checked);
@@ -18,6 +18,7 @@ export default function PageLeftTopSection(props) {
           type="checkbox"
           className="bg-gray-50 border-grey-300 focus:ring-4 focus:ring-primary-color  h-6 w-6 rounded text-primary-color text-red-600"
           onChange={(e) => handleCheck(e)}
+          checked={isKit ? true : false}
         />
         <h1
           className={
