@@ -25,17 +25,16 @@ export default function ProductDisplayFinalCheckPage(props) {
             icon={faCircleInfo}
           />
         </td>
-        <tr className="final-check-product-table-row">
-          <td className="final-check-product-table-name-field text-ProductTitleSmall">
-            {product.VariationName &&
-            product.ProductName !== product.VariationName ? (
-              <DisplayNameVar />
-            ) : (
-              product.ProductName
-            )}
-          </td>
-        </tr>
-        <td className="final-check-product-table-total-field text-ProductTitleMedium">
+
+        <td className="final-check-product-table-name-field text-ProductTitleSmall">
+          {product.VariationName &&
+          product.ProductName !== product.VariationName ? (
+            <DisplayNameVar />
+          ) : (
+            product.ProductName
+          )}
+        </td>
+        <td className="final-check-product-table-total-field text-ProductTitleMedSmall">
           {product.Price} dkk
         </td>
         <td className="final-check-product-table-amount-field final-check-product-table-amount-field-flex">

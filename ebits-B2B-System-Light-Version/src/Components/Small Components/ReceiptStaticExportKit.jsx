@@ -26,7 +26,7 @@ export default function ReceiptStaticExportKit(props) {
             Products:
           </h1>
 
-          <div className="scroll-section sm:max-h-72 md:max-h-80 lg:max-h-96 xl:max-h-104 overflow-y-auto">
+          <div className="receipt-static-scroll scroll-section sm:max-h-72   ">
             {cartProducts.map((product) =>
               product.qty && product.variationQty !== 0 ? (
                 <ProductDisplayStaticReceipt

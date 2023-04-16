@@ -29,7 +29,7 @@ export default function BasketProductsDisplay(props) {
                 fallBackURL={`http://65.109.137.46:5000/img/${product.ProductIndex}_0.jpg`}
                 product={product}
               />
-              <h2 className="inline-block font-bold text-ProductTitleSmall ml-10 cursor-default">
+              <h2 className="inline-block font-bold text-ProductTitleTiny ml-10 cursor-default">
                 {product.ProductName === product.VariationName ? (
                   product.ProductName
                 ) : (

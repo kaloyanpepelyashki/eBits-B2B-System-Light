@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 export default function ButtonsHolder(props) {
   const navigate = useNavigate();
 
-  const { handleTransfer, title, backBtn } = props;
+  const { handleTransfer, title, backDest, backTitle } = props;
 
   return (
     <>
@@ -12,15 +12,15 @@ export default function ButtonsHolder(props) {
         <div className="buttons-holder-inner">
           <button
             className="btn-holder-back text-GlobalBtnsTxt font-semibold mx-5"
-            onClick={() => navigate(-1)}
+            onClick={() => navigate(backDest ? backDest : -1)}
           >
-            &lt; Back
+            &lt; {backTitle ? backTitle : "Back"}
           </button>
           <button
             className="btn-holder-next bg-primary-color rounded-sm text-GlobalBtnsTxt font-normal mx-5"
             onClick={handleTransfer}
           >
-            {title}
+            {title ? title : "Next"}
           </button>
         </div>
       </div>

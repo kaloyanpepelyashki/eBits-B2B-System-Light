@@ -69,11 +69,7 @@ export default function ContactInfoPage() {
           </div>
         </div>
         <div className="buttons-holder-h">
-          <ButtonsHolder
-            back={"Yes"}
-            title={"Next"}
-            handleTransfer={handleTransfer}
-          />
+          <ButtonsHolder handleTransfer={handleTransfer} />
         </div>
       </main>
     </>

@@ -44,15 +44,21 @@ export default function AskToSave() {
   return (
     // <=== TYPE OF ORDER PAGE / ASK TO EXPORT PAGE CONTENT STARTS HERE ===>
     <>
-      <main className="TypeOfOrder-page-content-wrapper page-main-section
-      px-6 mt-14 2xl:px-20">
+      <main
+        className="TypeOfOrder-page-content-wrapper page-main-section
+      px-6 mt-14 2xl:px-20"
+      >
         <div className="TypeOfOrder-inner-content">
-          <div className=" landing-page-welcome-header text-TextBig
-           md:pt-10 xl:mt-24">
-            Would you like to save the
-            <b className="text-primary-color"> current invoice <br/></b> a custom
-            product link?
-            <div/>
+          <div
+            className=" landing-page-welcome-header text-TextBig text-center
+           md:pt-10 xl:mt-24"
+          >
+            Would you like to save the&nbsp;
+            <b className="text-primary-color">
+              current invoice <br />
+            </b>
+            a custom product link?
+            <div />
           </div>
           <div className="TypeOfOrder-page-route-choice-holder mx-8 mt-16">
             <div className="TypeOfOrder-page-choice-item font-semibold space-x-4">
@@ -88,8 +94,6 @@ export default function AskToSave() {
           </div>
         </div>
         <ButtonsHolder
-          back={"Yes"}
-          title={"Next"}
           handleTransfer={handleTransfer}
           className="button-holder"
         />

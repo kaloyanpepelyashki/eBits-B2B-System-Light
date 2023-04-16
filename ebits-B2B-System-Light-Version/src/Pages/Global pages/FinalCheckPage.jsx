@@ -76,11 +76,7 @@ export default function FinalCheckPage(props) {
           </div>
         </div>
         <div className="buttons-holder-h">
-          <ButtonsHolder
-            back={"Yes"}
-            title={"Next"}
-            handleTransfer={handleTransfer}
-          />
+          <ButtonsHolder back={"Yes"} handleTransfer={handleTransfer} />
         </div>
       </main>
     </>

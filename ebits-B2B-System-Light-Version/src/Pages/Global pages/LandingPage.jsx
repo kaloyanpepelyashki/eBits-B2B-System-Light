@@ -26,7 +26,6 @@ export default function LandingPage({ productsList }) {
       setEmailValidation(false);
     } else {
       setEmailValidation(true);
-      console.log({ emailAddress });
       axios
         //Makes a post request to the mailer server
         .post(
@@ -34,9 +33,7 @@ export default function LandingPage({ productsList }) {
           { emailAddress: emailAddress },
           { headers: { "Content-Type": "application/json" } }
         )
-        .then((response) => {
-          console.log(response);
-        })
+        .then((response) => {})
         .catch((err) => {
           console.log(err);
         });
@@ -90,8 +87,7 @@ export default function LandingPage({ productsList }) {
           </button>
         </div>
         <ButtonsHolder
-          back={"No"}
-          title={"Next"}
+          backTitle={"Ebits web page"}
           handleTransfer={handleTransfer}
           className="buttons-holder"
         />

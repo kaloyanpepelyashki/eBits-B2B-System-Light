@@ -22,8 +22,6 @@ export default function PageLeftSide(props) {
     funcs: { addProduct, removeProduct, handleDirectAmountInput },
   } = useContext(ShoppingCartFunc);
 
-  console.log(cartProducts);
-
   //Re-assigning the functions for the basked functionality features.
   const handleAddProduct = (product) => {
     addProduct(product);

@@ -29,11 +29,7 @@ export default function NameKit() {
             </div>
             <ReceiptStaticExportKit />
           </div>
-          <ButtonsHolder
-            back={"Yes"}
-            title={"Finish"}
-            handleTransfer={handleTransfer}
-          />
+          <ButtonsHolder title={"Finish"} handleTransfer={handleTransfer} />
         </div>
       </main>
     </>
