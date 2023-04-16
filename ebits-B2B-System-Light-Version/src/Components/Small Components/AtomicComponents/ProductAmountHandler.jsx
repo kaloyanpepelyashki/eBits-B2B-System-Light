@@ -41,6 +41,7 @@ export default function ProductAmountHandler(props) {
           onChange={(e) =>
             handleUserDirectInput(product, Number(e.target.value))
           }
+          min={1}
         />
         <button
           className="inline-block font-bold mt-1 mx-2 border border-solid px-2 -ml-2 mr-10"
