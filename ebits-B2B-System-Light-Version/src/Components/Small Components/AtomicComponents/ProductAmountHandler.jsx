@@ -1,25 +1,28 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { ShoppingCartFunc } from "../../Context Components/ShoppingCartFuncContext";
 
 export default function ProductAmountHandler(props) {
-  const { product, handleIncreaseProductAmount, handleReduceProductAmount } =
-    props;
+  const { product } = props;
 
-  const [amountValue, setAmountValue] = useState(product.qty);
   const {
     funcs: {
-      addProduct,
       reduceProductAmount,
       increaseProductAmount,
-      removeProduct,
       handleDirectAmountInput,
     },
   } = useContext(ShoppingCartFunc);
 
   const handleUserDirectInput = (product, amount) => {
     handleDirectAmountInput(product, amount);
-    setAmountValue(amount);
   };
+
+  const handleReduceProductAmount = (product) => {
+    reduceProductAmount(product);
+  };
+  const handleIncreaseProductAmount = (product) => {
+    increaseProductAmount(product);
+  };
+
   return (
     <>
       <div className="product-amount-handler-component-wrapper flex items-center">
@@ -31,10 +34,6 @@ export default function ProductAmountHandler(props) {
         >
           -
         </button>
-        {/*  
-        <h2 className="final-check-product-table-price text-ProductAmountIndex mt-1 mx-2">
-          <b>{product.qty}</b>
-        </h2> */}
         <input
           type="number"
           className="final-check-product-table-price direct-amount-input-amounnt-handler w-12 mt-1 mx-2 "

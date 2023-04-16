@@ -19,7 +19,7 @@ export default function ProcessMicroCopy(props) {
         <p
           className={
             processStep >= 2
-              ? "process-micro-copy-text ml-2 text-txt-black-color text-TextSmall text-left font-bold"
+              ? "process-micro-copy-text ml-2 text-txt-black-color text-TextSmall text-left font-bold cursor-default"
               : "process-micro-copy-text ml-2 text-txt-black-color text-TextSmall text-left font-bold cursor-default"
           }
         >

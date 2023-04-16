@@ -126,7 +126,7 @@ export default function PageLeftSideStaticContacts() {
               />
               <input
                 type="text"
-                className="contacts-page-input-field-small ml-4 pl-2 py-1.5 bg-white border-white border-slate-300 rounded-sm text-sm shadow-md
+                className="contacts-page-input-field-small ml-4 pl-2 py-1.5 bg-white border-red border-slate-300 rounded-sm text-sm shadow-md
               focus:outline-none"
                 value={contactInfoState.town}
                 placeholder="Town"

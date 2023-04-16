@@ -14,12 +14,7 @@ import PopUpMessage from "../Small Components/FinalCheckPagePop-up";
 export default function PageLeftSideFinalCheckPage(props) {
   const { cartProducts, productList } = props;
   const {
-    funcs: {
-      addProduct,
-      reduceProductAmount,
-      increaseProductAmount,
-      removeProduct,
-    },
+    funcs: { addProduct, removeProduct },
   } = useContext(ShoppingCartFunc);
 
   const [toggleUp, setToggleUp] = useState(false);
@@ -29,12 +24,6 @@ export default function PageLeftSideFinalCheckPage(props) {
   };
   const handleRemoveProduct = (product) => {
     removeProduct(product);
-  };
-  const handleReduceProductAmount = (product) => {
-    reduceProductAmount(product);
-  };
-  const handleIncreaseProductAmount = (product) => {
-    increaseProductAmount(product);
   };
   return (
     <>
@@ -63,17 +52,17 @@ export default function PageLeftSideFinalCheckPage(props) {
             </p>
 
             <div className="page-left-side-contacts-add-more-holder text-primary-color invisible md:visible">
-            <FontAwesomeIcon
-               icon={faPlus}
-               className="text-TextMid cursor-pointer md:mr-2"
-               onClick={() => {
-               setToggleUp(true);
+              <FontAwesomeIcon
+                icon={faPlus}
+                className="text-TextMid cursor-pointer md:mr-2"
+                onClick={() => {
+                  setToggleUp(true);
                 }}
-            />
-           <p className="text-primary-color text-ProductTitleSmall font-bold">
-            Add more
-            </p>
-           </div>
+              />
+              <p className="text-primary-color text-ProductTitleSmall font-bold">
+                Add more
+              </p>
+            </div>
           </div>
           {props.children}
           <div className="products-holder-section">
@@ -100,10 +89,6 @@ export default function PageLeftSideFinalCheckPage(props) {
                       <ProductDisplayFinalCheckPage
                         key={product.productBaksetUnqKey}
                         product={product}
-                        handleIncreaseProductAmount={
-                          handleIncreaseProductAmount
-                        }
-                        handleReduceProductAmount={handleReduceProductAmount}
                         handleRemoveProduct={handleRemoveProduct}
                       />
                     ) : (

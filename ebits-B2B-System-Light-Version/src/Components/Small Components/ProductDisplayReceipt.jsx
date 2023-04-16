@@ -28,7 +28,7 @@ export default function ProductDisplayReceipt(props) {
 
         <div className="product-display-receipt-main-cont">
           <div className="product-display-receipt-name">
-            <p className="text-VariationTitleSmall">
+            <p className="text-VariationTitleSmall cursor-default">
               {product.ProductName === product.VariationName ? (
                 product.ProductName
               ) : (
@@ -37,7 +37,9 @@ export default function ProductDisplayReceipt(props) {
             </p>
           </div>
           <div className="product-display-receipt-price">
-            <p className="text-VariationTitle">{product.Price} dkk</p>
+            <p className="text-VariationTitle cursor-default">
+              {product.Price} dkk
+            </p>
           </div>
         </div>
         <div className="">

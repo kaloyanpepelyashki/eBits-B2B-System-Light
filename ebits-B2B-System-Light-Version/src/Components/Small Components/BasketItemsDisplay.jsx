@@ -7,12 +7,7 @@ import ProductAmountHandler from "./AtomicComponents/ProductAmountHandler";
 import ProductImageHandler from "./AtomicComponents/ProductImageHandler";
 
 export default function BasketProductsDisplay(props) {
-  const {
-    product,
-    handleIncreaseProductAmount,
-    handleReduceProductAmount,
-    handleRemoveProduct,
-  } = props;
+  const { product, handleRemoveProduct } = props;
 
   const DisplayNameVar = () => {
     return (
@@ -44,11 +39,7 @@ export default function BasketProductsDisplay(props) {
             </div>
 
             <div className="flex items-center">
-              <ProductAmountHandler
-                product={product}
-                handleIncreaseProductAmount={handleIncreaseProductAmount}
-                handleReduceProductAmount={handleReduceProductAmount}
-              />
+              <ProductAmountHandler product={product} />
               <FontAwesomeIcon
                 icon={faTrash}
                 className="trash-icon final-check-product-icon"

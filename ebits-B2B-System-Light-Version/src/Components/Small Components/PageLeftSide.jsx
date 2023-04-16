@@ -19,13 +19,7 @@ export default function PageLeftSide(props) {
   //Destructuring the object, for a best practice use
   const {
     cartProducts,
-    funcs: {
-      addProduct,
-      reduceProductAmount,
-      increaseProductAmount,
-      removeProduct,
-      handleDirectAmountInput,
-    },
+    funcs: { addProduct, removeProduct, handleDirectAmountInput },
   } = useContext(ShoppingCartFunc);
 
   console.log(cartProducts);
@@ -37,12 +31,7 @@ export default function PageLeftSide(props) {
   const handleRemoveProduct = (product) => {
     removeProduct(product);
   };
-  const handleReduceProductAmount = (product) => {
-    reduceProductAmount(product);
-  };
-  const handleIncreaseProductAmount = (product) => {
-    increaseProductAmount(product);
-  };
+
   const handleUserDirectInput = (product, amount) => {
     handleDirectAmountInput(product, amount);
   };
@@ -109,8 +98,6 @@ export default function PageLeftSide(props) {
                   <BasketProductsDisplay
                     key={product.productBaksetUnqKey}
                     product={product}
-                    handleIncreaseProductAmount={handleIncreaseProductAmount}
-                    handleReduceProductAmount={handleReduceProductAmount}
                     handleRemoveProduct={handleRemoveProduct}
                     handleUserDirectInput={handleUserDirectInput}
                   />
